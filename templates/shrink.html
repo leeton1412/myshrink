@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shrink</title>
+</head>
+<body>
+    {% for shrink in shrinkDB %}
+        {{ shrink.product_name }}<br>
+        {{ shrink.product_location }}<br>
+        {{ shrink.amount_lost_value }}<br>
+    {% endfor %}
+</body>
+</html>
