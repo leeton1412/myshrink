@@ -1,1 +1,4 @@
-console.log("Oh hi there!")
+  //Nav bar collapse 
+$(document).ready(function(){
+$('.sidenav').sidenav();
+  });
