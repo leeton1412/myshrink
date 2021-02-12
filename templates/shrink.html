@@ -1,93 +1,97 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="myshrink-banner">
-    <div class="myshrink-header">
-        <h1> MyShrink </h1> 
-    </div>
+   <div class="myshrink-header">
+      <h1> MyShrink </h1>
+   </div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col s12 center-align">
+   <h2>What is it?</h2>
+</div>
+<!-- Materialize card panel 1 -->
+<div class="col s12 m4 center-align">
+   <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+         <img class="activator" src=
+            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" 
+            alt="working_on_answers">
+      </div>
+      <div class="card-content">
+         <span class="card-title activator grey-text text-darken-4">The What?<i class="fas fa-chevron-circle-down"></i></span>
+      </div>
+      <div class="card-reveal">
+         <span class="card-title grey-text text-darken-4"><i class="far fa-times-circle"></i></span>
+         <p>Shrink is a major threat for Tesco as a business. The definition is "a loss that cannot be accounted for". There
+            are
+            many reasons that can cause shrink and as people with an interest in the business tracking, monitiring and
+            solving shrink
+            issues is the best way we can combat this. This app is a simple to use, user driven app to help track shrink
+            threats, store solved issues and view history to help us keep on top of it using a MongoDB database
+         </p>
+      </div>
+   </div>
 </div>
 
-<div class="container">
-    <div class="row">
-      <div class="col s12 center-align">
-          <h2>What is it?</h2>
-      </div>
-<!-- Materialize card panel 1 -->
-      <div class="col s12 m4 center-align">
-          <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src=
-                    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" 
-                    alt="working_on_answers">
-                </div>  
-                    <div class="card-content">
-                         <span class="card-title activator grey-text text-darken-4">The What?<i class="fas fa-chevron-circle-down"></i></span>
-                            
-                    </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="far fa-times-circle"></i></span>
-                                <p>Shrink is a major threat for Tesco as a business. The definition is "a loss that cannot be accounted for". There
-                                    are
-                                    many reasons that can cause shrink and as people with an interest in the business tracking, monitiring and
-                                    solving shrink
-                                    issues is the best way we can combat this. This app is a simple to use, user driven app to help track shrink
-                                    threats, store solved issues and view history to help us keep on top of it using a MongoDB database</p>
-                                </div>
-            </div>
-      </div>
 
-      <!-- Materialize card panel 2 -->
-      <div class="col s12 m4 offset-m2 center-align">
-          <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src=
-                    https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80 
-                    alt="Enter_data">
-                </div>  
-                    <div class="card-content">
-                         <span class="card-title activator grey-text text-darken-4">The How?<i class="fas fa-chevron-circle-down"></i></span>
-                            
-                    </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="far fa-times-circle"></i></span>
-                                <p>It's simple. Knowing what your shrink is, and what its history is, is the
-                                    first step to success.
-                                </p>
-                        <p class="center-align">users will:</p> 
-                <ul>
-                    <li><i class="fas fa-check"></i> Check shrink via SBO or Store Reports </li>
-                    <li><i class="fab fa-elementor"></i> Enter it into the App </li>
-                    <li><i class="fas fa-sign-in-alt"></i> Submit it with a simple button click </li>
-                    <li><i class="fas fa-search"></i> Review and investigate shrink issues </li>
-                    <li><i class="fas fa-wrench"></i> Click resolve to record the solved information </li>
-                </ul>
-                   
-                                </div>
-            </div>
+<!-- Materialize card panel 2 -->
+<div class="col s12 m4 offset-m4 center-align">
+   <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+         <img class="activator" src=
+            https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80 
+            alt="Enter_data">
       </div>
-<!--
-      <div class="col s12 m6 offset-m2">
-          <p>
-                The App relies on us which is why its so important. Knowing what your shrink is and what its history is, is the
-                first step to success.
-                Users will:
-                <ul class="center-align">
-                    <li> Check shrink via SBO or Store Reports </li>
-                    <li> Enter it into the App </li>
-                    <li> Submit it with a simple button click </li>
-                    <li> Review and investigate shrink issues </li>
-                    <li> Click resolve to record the solved information </li>
-                </ul>
-            </p>
+      <div class="card-content">
+         <span class="card-title activator grey-text text-darken-4">The How?<i class="fas fa-chevron-circle-down"></i></span>
       </div>
+      <div class="card-reveal">
+         <span class="card-title grey-text text-darken-4"><i class="far fa-times-circle"></i></span>
+         <p>It's simple. Knowing what your shrink is, and what its history is, is the
+            first step to success.
+         </p>
+         <p class="center-align">users will:</p>
+         <ul>
+            <li><i class="fas fa-check"></i> Check shrink via SBO or Store Reports </li>
+            <li><i class="fab fa-elementor"></i> Enter it into the App </li>
+            <li><i class="fas fa-sign-in-alt"></i> Submit it with a simple button click </li>
+            <li><i class="fas fa-search"></i> Review and investigate shrink issues </li>
+            <li><i class="fas fa-wrench"></i> Click resolve to record the solved information </li>
+         </ul>
+      </div>
+   </div>
+</div>
+
+<!--Shrink button-->
+<div class="col s12">
+    <div class="row center-align">
+        <a class="waves-effect waves-light btn light-blue accent-4"><i class="material-icons right"></i>Enter Shrink</a>
     </div>
--->
+</div>
 <!--
-    {% for shrink in shrinkDB %}
-        {{ shrink.product_name }}<br>
-        {{ shrink.product_location }}<br>
-        {{ shrink.amount_lost_value }}<br>
-        
-    {% endfor %}
--->
+   <div class="col s12 m6 offset-m2">
+       <p>
+             The App relies on us which is why its so important. Knowing what your shrink is and what its history is, is the
+             first step to success.
+             Users will:
+             <ul class="center-align">
+                 <li> Check shrink via SBO or Store Reports </li>
+                 <li> Enter it into the App </li>
+                 <li> Submit it with a simple button click </li>
+                 <li> Review and investigate shrink issues </li>
+                 <li> Click resolve to record the solved information </li>
+             </ul>
+         </p>
+   </div>
+   </div>
+   -->
+<!--
+   {% for shrink in shrinkDB %}
+       {{ shrink.product_name }}<br>
+       {{ shrink.product_location }}<br>
+       {{ shrink.amount_lost_value }}<br>
+       
+   {% endfor %}
+   -->
 {% endblock %}
-
