@@ -79,8 +79,7 @@
       <div class="card-panel light-blue">
         <span class="white-text">
                {% for shrink in shrinkDB %}
-               {{ shrink.product_name }}
-               |£ {{ shrink.amount_lost_value }}<br>
+              <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
                {% endfor %}
         </span>
       </div>
