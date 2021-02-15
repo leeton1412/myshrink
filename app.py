@@ -22,9 +22,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_shrink")
 def get_shrink():
+    shrinkrs = mongo.db.resolvedDb.find().limit(5).sort(
+        "amount_lost_value"
+    )
     shrink = mongo.db.shrinkDB.find().limit(5).sort(
         "amount_lost_value", -1,)
-    return render_template("shrink.html", shrinkDB=shrink)
+    return render_template(
+        "shrink.html", shrinkDB=shrink, shrinkresolved=shrinkrs)
+
 
 # Dont forget to remove debug
 
