@@ -23,7 +23,8 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Log In</a></li>
         <li><a href="#">Log Out</a></li>
-        <li><a href="#">Store View</a></li> 
+        <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
+        <li><a href="{{ url_for('register') }}">Register</a></li> 
         <li><a href="#">Search Shrink</a></li>
       </ul>
     </div>
@@ -33,7 +34,8 @@
     <ul class="sidenav" id="mobile-collapse">
         <li><a href="#">Log In</a></li>
         <li><a href="#">Log Out</a></li>
-        <li><a href="#">Store View</a></li> 
+        <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li> 
         <li><a href="#">Search Shrink</a></li>
   </ul>
 

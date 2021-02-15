@@ -4,6 +4,7 @@ from flask import (
      redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -29,6 +30,11 @@ def get_shrink():
         "amount_lost_value", -1,)
     return render_template(
         "shrink.html", shrinkDB=shrink, shrinkresolved=shrinkrs)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 # Dont forget to remove debug
