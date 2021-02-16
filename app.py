@@ -34,6 +34,9 @@ def get_shrink():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # See if manager is registered
+        present_user = mongo.db.userDB.find_one({})
     return render_template("register.html")
 
 
