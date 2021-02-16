@@ -37,7 +37,7 @@ def get_shrink():
 def register():
     if request.method == "POST":
         # See if manager is registered
-        present_user = mongo.db.userDB.find_one(
+        present_user = mongo.db.userDb.find_one(
             {"username": request.form.get("username").lower()})
 
         if present_user:

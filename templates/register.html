@@ -11,19 +11,19 @@
         <div class="card-panel light-blue lighten-4">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="username" type="text" class="validate" name="username">
+                    <input id="username" type="text" class="validate" name="username" minlength="3" maxlength="16" pattern="^[a-zA-Z0-9]{3,16}$"  required>
                     <label for="username">Username</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate" name="password">
+                    <input id="password" type="password" class="validate" name="password" minlength="6" maxlength="15" pattern="^[a-zA-Z0-9]{6,15}$" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col m6">
-                    <select name="department">
+                    <select name="department" required>
                         <option value="" disabled selected>Choose your department</option>
                         <option value="produce">Produce</option>
                         <option value="fresh food">Fresh Food</option>
