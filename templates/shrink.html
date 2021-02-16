@@ -79,6 +79,7 @@
         <h4>Top 5 Shrink Threats</h4>
       <div class="card-panel light-blue">
         <span class="white-text">
+<!--Shrink For loop top 5-->
                {% for shrink in shrinkDB %}
                 <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
                {% endfor %}
@@ -89,6 +90,7 @@
         <h4>Top 5 Resolved Threats</h4>
       <div class="card-panel light-blue">
         <span class="white-text">
+<!-- Shrink For loop top 5 resolves-->
             {% for shrinkrs in shrinkresolved %}
                 <li>{{ shrinkrs.product_name }} ||£ {{ shrinkrs.amount_lost_value }} || {{ shrinkrs.date }}</li> 
             {% endfor %}

@@ -23,6 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_shrink")
 def get_shrink():
+    # find and sort shrink top 5
     shrinkrs = mongo.db.resolvedDb.find().limit(5).sort(
         "amount_lost_value"
     )
@@ -36,7 +37,24 @@ def get_shrink():
 def register():
     if request.method == "POST":
         # See if manager is registered
-        present_user = mongo.db.userDB.find_one({})
+        present_user = mongo.db.userDB.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if present_user:
+            flash("Already a User")
+            return redirect(url_for("register"))
+
+        # Register user to userDb
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "department": request.form.get("department")
+        }
+        mongo.db.userDb.insert_one(register)
+
+        # Make user in session
+        session["employee"] = request.form.get("username").lower()
+        flash("Welcome!")
     return render_template("register.html")
 
 
