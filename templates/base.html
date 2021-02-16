@@ -21,7 +21,7 @@
       <a href="#!" class="brand-logo">MyShrink</a>
       <a href="#" data-target="mobile-collapse" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Log In</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
         <li><a href="#">Log Out</a></li>
         <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
         <li><a href="{{ url_for('register') }}">Register</a></li> 
@@ -32,7 +32,7 @@
 
 <!-- Mobile Nav view-->
     <ul class="sidenav" id="mobile-collapse">
-        <li><a href="#">Log In</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
         <li><a href="#">Log Out</a></li>
         <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li> 
