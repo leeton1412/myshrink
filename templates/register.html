@@ -5,41 +5,45 @@
       <h1> Register </h1>
    </div>
 </div>
-
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <div class="card-panel light-blue lighten-4">
+<!--Registration Form-->
+<form>
+   <input type="text"><input type="submit" value="Submit">
+   <div class="row">
+        <div class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel light-blue lighten-4">
     <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" name="first_name">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" name="last_name">
-          <label for="last_name">Last Name</label>
-        </div>
+<form class="col s12">
+ <!--Name Entry-->
+   <div class="row">
+      <div class="input-field col s6">
+         <input id="first_name" type="text" class="validate" name="first_name">
+         <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+         <input id="last_name" type="text" class="validate" name="last_name">
+         <label for="last_name">Last Name</label>
+      </div>
+ <!--Password-->
+      <div class="input-field col s6">
+         <input id="password" type="password" class="validate" name="password">
+         <label for="password">Password</label>
+      </div>
+ <!--Materialize select form-->
+      <div class="input-field col m6">
+         <select>
+            <option value="" disabled selected>Choose your department</option>
+            <option value="1">Produce</option>
+            <option value="2">Fresh Food</option>
+            <option value="3">GM</option>
+         </select>
+         <label>Department</label>
       </div>
       <div class="row">
-          
-    <p>
-      <label>
-            <input name="department" type="radio"/>
-            <span>Produce</span>
-      </label>
-    </p>
-    <p>
-      <label>
-            <input name="department" type="radio"/>
-            <span>GM</span>
-      </label>
-    </p> 
-    <p>
-      <label>
-            <input name="department" type="radio" />
-            <span>Fresh</span>
-      </label>
-    </p>
+<!--Submit Button-->
+         <button class="btn-large waves-light light-blue accent-4 col s12" type="submit" name="action">
+         Register
+         </button>
       </div>
+   </div>
+</form>
 {% endblock %}
