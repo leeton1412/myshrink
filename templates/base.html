@@ -24,7 +24,7 @@
         <li><a href="{{ url_for('login') }}">Log In</a></li>
         <li><a href="#">Log Out</a></li>
         <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
-        <li><a href="{{ url_for('profile', username=session['employee']) }}">Profile</a></li>
+        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li> 
         <li><a href="#">Search Shrink</a></li>
       </ul>
@@ -37,7 +37,7 @@
         <li><a href="#">Log Out</a></li>
         <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li> 
-        <li><a href="{{ url_for('profile', username=session['employee']) }}">Profile</a></li>
+        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
         <li><a href="#">Search Shrink</a></li>
   </ul>
 <!-- Flash Messages Section-->
