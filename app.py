@@ -53,8 +53,9 @@ def register():
         mongo.db.userDb.insert_one(register)
 
         # Make user in session
-        session["employee"] = request.form.get("username").lower()
+        session["user"] = request.form.get("username").lower()
         flash("Welcome!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
 
@@ -67,8 +68,10 @@ def login():
         if present_user:
             if check_password_hash(
                     present_user["password"], request.form.get("password")):
-                session["username"] = request.form.get("username").lower()
+                session["user"] = request.form.get("username").lower()
                 flash("Thank you {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session[
+                    "user"]))
             else:
                 flash("Username Or Password Is Incorrect")
                 return redirect(url_for("login"))
@@ -78,6 +81,13 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.userDb.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 # Dont forget to remove debug
