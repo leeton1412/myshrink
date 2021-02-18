@@ -26,13 +26,13 @@
             <a href="#!" class="brand-logo">MyShrink</a>
             <a href="#" data-target="mobile-collapse" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
                 {% if session.user %}
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="#">Search Shrink</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
                     <li><a href="{{ url_for('register') }}">Register</a></li> 
                 {% endif %}
              </ul>
@@ -41,12 +41,15 @@
 
     <!-- Mobile Nav view-->
     <ul class="sidenav" id="mobile-collapse">
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
-        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-        <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
-        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-        <li><a href="#">Search Shrink</a></li>
+                    <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
+                {% if session.user %}
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="#">Search Shrink</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li> 
+                    <li><a href="{{ url_for('register') }}">Register</a></li> 
+                {% endif %}
     </ul>
     <!-- Flash Messages Section-->
     <div class="container alert-style">
