@@ -105,6 +105,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/addshrink")
+def addshrink():
+    return render_template("add-shrink.html")
+
+
 # Dont forget to remove debug
 
 
