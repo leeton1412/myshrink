@@ -2,16 +2,21 @@
 {% block content %}
 <div class="myshrink-banner">
     <div class="myshrink-header">
-        <h1> Welcome </h1>
+        <h1> WELCOME {{ username.upper() }} </h1>
     </div>
 </div>
 
-<div class="row">
-    <form class="col s12 m6 offset-m3">
-        <div class="card-panel light-blue lighten-4">
-          <h2>{{ username }}'s Profile</h2>
-        </div>
-    </form>
+<div class="row center-align">
+    <div class="col s12 m5">
+        <h4>Top 5 Shrink Department</h4>
+      <div class="card-panel light-blue">
+        <span class="white-text">
+               {% for shrink in shrinkDB %}
+                <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+               {% endfor %}
+        </span>
+      </div>
+    </div>
 </div>
 
 

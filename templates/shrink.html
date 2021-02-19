@@ -81,7 +81,9 @@
         <span class="white-text">
 <!--Shrink For loop top 5-->
                {% for shrink in shrinkDB %}
-                <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+                    {% if shrink.resolved == false %}
+                        <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+                    {% endif %}    
                {% endfor %}
         </span>
       </div>
@@ -91,8 +93,10 @@
       <div class="card-panel light-blue">
         <span class="white-text">
 <!-- Shrink For loop top 5 resolves-->
-            {% for shrinkrs in shrinkresolved %}
-                <li>{{ shrinkrs.product_name }} ||£ {{ shrinkrs.amount_lost_value }} || {{ shrinkrs.date }}</li> 
+            {% for shrink in shrinkDB %}
+                {% if shrink.resolved != true %}
+                        <li>{{ shrink.product_name }} ||£ {{shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+                {% endif %}
             {% endfor %}
         </span>
       </div>

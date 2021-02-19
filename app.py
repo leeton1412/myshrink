@@ -24,13 +24,10 @@ mongo = PyMongo(app)
 @app.route("/get_shrink")
 def get_shrink():
     # find and sort shrink top 5
-    shrinkrs = mongo.db.resolvedDb.find().limit(5).sort(
-        "amount_lost_value"
-    )
-    shrink = mongo.db.shrinkDB.find().limit(5).sort(
-        "amount_lost_value", -1,)
+    shrink = list(mongo.db.shrinkDB.find().limit(5).sort(
+        "amount_lost_value", -1,))
     return render_template(
-        "shrink.html", shrinkDB=shrink, shrinkresolved=shrinkrs)
+        "shrink.html", shrinkDB=shrink)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -64,7 +61,7 @@ def login():
     if request.method == "POST":
         present_user = mongo.db.userDb.find_one(
             {"username": request.form.get("username").lower()})
-
+        # Password check
         if present_user:
             if check_password_hash(
                     present_user["password"], request.form.get("password")):
