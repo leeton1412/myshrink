@@ -5,14 +5,29 @@
         <h1> WELCOME {{ username.upper() }} </h1>
     </div>
 </div>
-
+<!--Department shrink -->
 <div class="row center-align">
+    <div class="col s12 m5">
+        <h4>Top 5 Shrink Department</h4>
+        <div class="card-panel light-blue">
+            <span class="white-text">
+                {% for result in filtered_results %}
+                    {% if result.resolved == false %}
+                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
+                    {% endif %}
+                {% endfor %}
+            </span>
+        </div>
+    </div>
+<!-- Resolved shrink-->
     <div class="col s12 m5">
         <h4>Top 5 Shrink Department</h4>
       <div class="card-panel light-blue">
         <span class="white-text">
                {% for result in filtered_results %}
-                <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li> 
+                    {% if result.resolved != false %}               
+                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
+                    {% endif %} 
                {% endfor %}
         </span>
       </div>
