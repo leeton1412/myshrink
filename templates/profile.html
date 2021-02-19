@@ -11,8 +11,8 @@
         <h4>Top 5 Shrink Department</h4>
       <div class="card-panel light-blue">
         <span class="white-text">
-               {% for shrink in shrinkDB %}
-                <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+               {% for result in filtered_results %}
+                <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li> 
                {% endfor %}
         </span>
       </div>

@@ -82,9 +82,15 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    username = mongo.db.userDb.find_one(
-        {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    # Unpack MongoDb for profile find the user
+    user = mongo.db.userDb.find_one({"username": username})
+    # find the user department
+    user_department = user["department"]
+    # filter the results to be users department only
+    filtered_results = list(mongo.db.shrinkDB.find(
+        {"department": user_department}))
+    return render_template(
+        "profile.html", username=username, filtered_results=filtered_results)
 
     if session["user"]:
         return render_template("profile.html", username=username)
