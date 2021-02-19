@@ -2,11 +2,23 @@
 {% block content %}
 <div class="myshrink-banner">
     <div class="myshrink-header">
-        <h1> ADD SHRINK  </h1>
+        <h1> ADD SHRINK </h1>
     </div>
 </div>
 <!--Department shrink -->
-
-
-
+<div class="container">
+    <div class="card-panel light-blue lighten-4">
+        <form method="POST" action="">
+            <div class="input-field col s12">
+                <select id="department" name="department" class="validate" required>
+                        <option value="" disabled selected>Choose Department</option>
+                    {% for departments in department %}
+                        <option value="{{ departments.department }}"> {{ departments.department.upper() }} </option>
+                    {% endfor %}
+                </select>
+                <label>Choose Department</label>
+            </div>
+        </form>
+    </div>    
+</div>
 {% endblock %}

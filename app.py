@@ -107,7 +107,9 @@ def logout():
 
 @app.route("/addshrink")
 def addshrink():
-    return render_template("add-shrink.html")
+    # Get department categories
+    department = mongo.db.shrinkDb.find().sort("department", 1)
+    return render_template("add-shrink.html", department=department)
 
 
 # Dont forget to remove debug
