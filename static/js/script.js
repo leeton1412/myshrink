@@ -1,15 +1,12 @@
   //Materialize Jquery
 $(document).ready(function(){
     $('.sidenav').sidenav();
-    $('.datepicker').datepicker();
-    $('select').formSelect({
+    $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",
         autoClose: true,
         showClearBtn: true,
-        i18n:{
-            done: "select"
-        }
-    });
+        });
+    $('select').formSelect()
   });
 
   // select box on register
