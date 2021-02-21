@@ -8,11 +8,13 @@
 <!--Department shrink -->
 <div class="container">
     <div class="card-panel light-blue lighten-4">
-        <form method="POST" action="">
+        <form method="POST" action="{{ url_for('addshrink') }}">
             <div class="row">
+<!-- Department Selector -->
                 <div class="input-field col s12">
                     <select id="department" name="department" class="validate" required>
                             <option value="" disabled selected>Choose Department</option>
+<!-- Department Jinja Loop -->
                         {% for departments in department %}
                             <option value="{{ departments.department }}"> {{ departments.department.upper() }} </option>
                         {% endfor %}
@@ -21,52 +23,60 @@
                 </div>
             </div>
             <div class="row">
+<!-- Product Name -->
                 <div class="input-field col s12 m6">
                     <input id="product_name" type="text" class="validate" name="product_name" minlength="3" maxlength="30" pattern="^[a-zA-Z0-9]{3,16}$"  required>
                     <label for="product_name">Product Name</label>
                 </div>
             </div>
             <div class="row">
+<!-- Product Location -->
                 <div class="input-field col s12 m6">
-                    <input id="product_location" type="text" class="validate" name="product_location" minlength="3" maxlength="30" pattern="^[a-zA-Z0-9]{3,16}$">
+                    <input id="product_location" type="text" class="validate" name="product_location" minlength="3" maxlength="30" pattern="^[a-zA-Z0-9]{3,30}$">
                     <label for="product_location">Location (i.e 12L6b)</label>
                 </div>
             </div>
             <div class="row">
+<!-- Loss in £'s -->
                 <div class="input-field col s12 m6">
-                    <input id="amount_lost_value" type="text" class="validate" name="amount_lost_value" minlength="3" maxlength="30" pattern="^[0-9]$"  required>
+                    <input id="amount_lost_value" type="number" class="validate" name="amount_lost_value" minlength="1" maxlength="30" required>
                     <label for="product_name">Amount In £ No Decimal</label>
                 </div>
             </div>
             <div class="row">
+<!-- Loss in units -->
                 <div class="input-field col s12 m6">
-                    <input id="amount_lost_singles" type="text" class="validate" name="amount_lost_singles" minlength="1" maxlength="30" pattern="^[0-9]{3,16}$"  required>
+                    <input id="amount_lost_singles" type="number" class="validate" name="amount_lost_singles" minlength="1" maxlength="30" required>
                     <label for="product_name">Amount In Singles</label>
                 </div>
             </div>
             <div class="row">
+<!-- Additional Information -->
                 <div class="input-field col s12 m6">
                     <textarea id="additional_info" name="additional_info" maxlength="100" class="materialize-textarea"></textarea>
                     <label for="additional_info">Additional Information </label>
                 </div>
             </div>
             <div class="row">
+<!-- Date of loss -->
                 <div class="input-field col s12 m6">
                     <input id="date" type="text" class="datepicker validate" name="date" required>
                     <label for="date">Date Of Loss</label>
                 </div>
             </div>            
             <div class="row">
+<!-- Reolve toggle -->
                 <div class="input-field col s12 m6">
                    <div class="switch">
-                        <label>
-                        Resolved
-                            <input type="checkbox">
+                        <label for="resolved">
+                            Resolved
+                            <input type="checkbox" id="resolved" name="resolved">
                             <span class="lever"></span>
                         </label>
                     </div>
                 </div>
             </div>
+<!-- Submit Button -->
             <div class="row col s12 center-align">
                 <button class="btn waves-effect waves-light" type="submit" name="POST">
                     Submit Shrink

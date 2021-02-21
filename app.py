@@ -105,8 +105,25 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/addshrink")
+@app.route("/addshrink", methods=["GET", "POST"])
 def addshrink():
+    # Submit form
+    if request.method == "POST":
+        resolved = True if request.form.get("resolved") else False
+        shrink = {
+            "department": request.form.get("department"),
+            "product_name": request.form.get("product_name"),
+            "product_location": request.form.get("product_location"),
+            "amount_lost_value": request.form.get.int("amount_lost_value"),
+            "amount_lost_singles": request.form.get.int("amount_lost_singles"),
+            "additional_info": request.form.get("additional_info"),
+            "date": request.form.get("date"),
+            "resolved": resolved,
+            "employee": session["user"]
+        }
+        mongo.db.shrinkDB.insert_one(shrink)
+        flash("Shrink Added")
+        return redirect(url_for("get_shrink"))
     # Get department categories
     department = mongo.db.shrinkDb.find().sort("department", 1)
     return render_template("add-shrink.html", department=department)
