@@ -131,7 +131,12 @@ def addshrink():
         return redirect(url_for("get_shrink"))
     # Get department categories
     department = mongo.db.shrinkDb.find().sort("department", 1)
-    return render_template("add-shrink.html", department=department)
+    return render_template("add-shrink.html", department=department
+
+
+@app.route("/edit_shrink/<shrink_id>", methods=["GET", "POST"])
+def edit_shrink(shrink_id):
+    
 
 
 # Dont forget to remove debug

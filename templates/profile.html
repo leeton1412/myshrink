@@ -6,35 +6,41 @@
     </div>
 </div>
 <!--Department shrink -->
-<div class="container">
-    <div class="row center-align">
-        <div class="col s12 m5">
+
+    <div class="row">
+        <div class="col s12 m6">
             <h4>Top Shrink Department</h4>
             <div class="card-panel light-blue left-align">
                 <span class="white-text">
                     {% for result in filtered_results %}
                         {% if not result.resolved %}
-                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
+                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}
+                                <a class="waves-effect waves-light btn-small">Edit</a>
+                                <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                            </li>
                         {% endif %}
                     {% endfor %}
                 </span>
             </div>
         </div>
     <!-- Resolved shrink-->
-        <div class="col s12 m5">
+<div class="row">   
+        <div class="col s12 m6">
             <h4>Top Shrink Resolves</h4>
-        <div class="card-panel light-blue left-align">
-            <span class="white-text">
+                <div class="card-panel light-blue left-align">
+                    <span class="white-text">
                 {% for result in filtered_results %}
-                        {% if result.resolved %}               
-                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
-                        {% endif %} 
+                    {% if result.resolved %}               
+                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}
+                                <a class="waves-effect waves-light btn-small">Edit</a>
+                                <a class="waves-effect waves-light btn-small red lighten-1">Delete</a> 
+                        </li>
+                       
+                    {% endif %} 
                 {% endfor %}
-            </span>
-        </div>
+                    </span>
+            </div>
         </div>
     </div>
-</div>
-
-
+</div> 
 {% endblock %}
