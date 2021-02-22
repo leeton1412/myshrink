@@ -6,31 +6,33 @@
     </div>
 </div>
 <!--Department shrink -->
-<div class="row center-align">
-    <div class="col s12 m5">
-        <h4>Top 5 Shrink Department</h4>
-        <div class="card-panel light-blue">
+<div class="container">
+    <div class="row center-align">
+        <div class="col s12 m5">
+            <h4>Top Shrink Department</h4>
+            <div class="card-panel light-blue left-align">
+                <span class="white-text">
+                    {% for result in filtered_results %}
+                        {% if not result.resolved %}
+                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            </div>
+        </div>
+    <!-- Resolved shrink-->
+        <div class="col s12 m5">
+            <h4>Top Shrink Resolves</h4>
+        <div class="card-panel light-blue left-align">
             <span class="white-text">
                 {% for result in filtered_results %}
-                    {% if result.resolved == false %}
-                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
-                    {% endif %}
+                        {% if result.resolved %}               
+                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
+                        {% endif %} 
                 {% endfor %}
             </span>
         </div>
-    </div>
-<!-- Resolved shrink-->
-    <div class="col s12 m5">
-        <h4>Top 5 Shrink Resolves</h4>
-      <div class="card-panel light-blue">
-        <span class="white-text">
-               {% for result in filtered_results %}
-                    {% if result.resolved != false %}               
-                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}</li>
-                    {% endif %} 
-               {% endfor %}
-        </span>
-      </div>
+        </div>
     </div>
 </div>
 

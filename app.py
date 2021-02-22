@@ -24,9 +24,9 @@ mongo = PyMongo(app)
 @app.route("/get_shrink")
 def get_shrink():
     # find and sort shrink top 5
-    shrink = list(mongo.db.shrinkDB.find().limit(5).sort(
+    shrink = list(mongo.db.shrinkDB.find().limit(20).sort(
         "amount_lost_value", -1,))
-    shrinkrs = list(mongo.db.shrinkDB.find().limit(5).sort(
+    shrinkrs = list(mongo.db.shrinkDB.find().limit(20).sort(
         "amount_lost_value", -1,))
     return render_template(
         "shrink.html", shrinkDB=shrink, shrinkrs=shrinkrs)
@@ -90,12 +90,13 @@ def profile(username):
     user_department = user["department"]
     # filter the results to be users department only
     filtered_results = list(mongo.db.shrinkDB.find(
-        {"department": user_department}))
-    return render_template(
-        "profile.html", username=username, filtered_results=filtered_results)
-
+        {"department": user_department}).limit(20).sort(
+        "amount_lost_value", -1,))
     if session["user"]:
-        return render_template("profile.html", username=username)
+        print(filtered_results)
+        return render_template(
+            "profile.html", username=username,
+            filtered_results=filtered_results)
 
     return redirect(url_for("login"))
 
