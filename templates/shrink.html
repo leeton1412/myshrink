@@ -93,7 +93,7 @@
       <div class="card-panel light-blue">
         <span class="white-text">
 <!-- Shrink For loop top 5 resolves-->
-            {% for shrink in shrinkDB %}
+            {% for shrink in shrinkrs %}
                 {% if shrink.resolved == true %}
                         <li>{{ shrink.product_name }} ||£ {{shrink.amount_lost_value }} || {{ shrink.date }}</li> 
                 {% endif %}

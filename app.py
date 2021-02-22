@@ -26,8 +26,10 @@ def get_shrink():
     # find and sort shrink top 5
     shrink = list(mongo.db.shrinkDB.find().limit(5).sort(
         "amount_lost_value", -1,))
+    shrinkrs = list(mongo.db.shrinkDB.find().limit(5).sort(
+        "amount_lost_value", -1,))
     return render_template(
-        "shrink.html", shrinkDB=shrink)
+        "shrink.html", shrinkDB=shrink, shrinkrs=shrinkrs)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -114,8 +116,10 @@ def addshrink():
             "department": request.form.get("department"),
             "product_name": request.form.get("product_name"),
             "product_location": request.form.get("product_location"),
-            "amount_lost_value": request.form.get.int("amount_lost_value"),
-            "amount_lost_singles": request.form.get.int("amount_lost_singles"),
+            "amount_lost_value": int(request.form.get(
+                "amount_lost_value")),
+            "amount_lost_singles": int(request.form.get(
+                "amount_lost_singles")),
             "additional_info": request.form.get("additional_info"),
             "date": request.form.get("date"),
             "resolved": resolved,
