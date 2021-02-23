@@ -143,7 +143,6 @@ def edit_shrink(shrink_id):
         "edit-shrink.html", shrink=shrink, department=department)
 
 
-
 # Dont forget to remove debug
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
