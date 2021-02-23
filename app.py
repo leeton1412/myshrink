@@ -135,8 +135,26 @@ def addshrink():
 
 @app.route("/edit_shrink/<shrink_id>", methods=["GET", "POST"])
 def edit_shrink(shrink_id):
-    shrink = mongo.db.shrinkDB.find_one({"_id": ObjectId(shrink_id)})
+    # Submit form
+    if request.method == "POST":
+        resolved = True if request.form.get("resolved") else False
+        edit = {
+            "department": request.form.get("department"),
+            "product_name": request.form.get("product_name"),
+            "product_location": request.form.get("product_location"),
+            "amount_lost_value": int(request.form.get(
+                "amount_lost_value")),
+            "amount_lost_singles": int(request.form.get(
+                "amount_lost_singles")),
+            "additional_info": request.form.get("additional_info"),
+            "date": request.form.get("date"),
+            "resolved": resolved,
+            "employee": session["user"]
+        }
+        mongo.db.shrinkDB.update({"_id": ObjectId(shrink_id)}, (edit))
+        flash("Shrink Updated")
 
+    shrink = mongo.db.shrinkDB.find_one({"_id": ObjectId(shrink_id)})
     department = mongo.db.shrinkDb.find().sort("department", 1)
     return render_template(
         "edit-shrink.html", shrink=shrink, department=department)
