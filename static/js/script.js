@@ -7,6 +7,7 @@ $(document).ready(function(){
         showClearBtn: true,
         });
     $('select').formSelect()
+    $('.collapsible').collapsible();
   });
 
   // select box on register

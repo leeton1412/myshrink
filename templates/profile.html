@@ -14,33 +14,44 @@
                 <span class="white-text">
                     {% for result in filtered_results %}
                         {% if not result.resolved %}
-                            <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}
+                        <ul class="collapsible blue darken-1">
+                            <li>
+                                <div class="collapsible-header blue darken-1"><a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                                  <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                                  <i ></i>{{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
+                                <div class="collapsible-body"><span> {{ result.additional_info }}</span></div>
+                            </li>
+                           <!-- <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}
                                 <a class="waves-effect waves-light btn-small">Edit</a>
                                 <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
-                            </li>
+                            </li>-->
+                        </ul>
                         {% endif %}
                     {% endfor %}
                 </span>
+                        
             </div>
         </div>
     <!-- Resolved shrink-->
-<div class="row">   
+    <div class="row">
         <div class="col s12 m6">
-            <h4>Top Shrink Resolves</h4>
-                <div class="card-panel light-blue left-align">
-                    <span class="white-text">
-                {% for result in filtered_results %}
-                    {% if result.resolved %}               
-                        <li>{{ result.product_name }} ||£ {{ result.amount_lost_value }} || {{ result.date }}
-                                <a class="waves-effect waves-light btn-small">Edit</a>
-                                <a class="waves-effect waves-light btn-small red lighten-1">Delete</a> 
-                        </li>
-                       
-                    {% endif %} 
-                {% endfor %}
-                    </span>
+            <h4>Top Shrink Department</h4>
+            <div class="card-panel light-blue left-align">
+                <span class="white-text">
+                    {% for result in filtered_results %}
+                        {% if result.resolved %}
+                        <ul class="collapsible blue darken-1">
+                            <li>
+                                <div class="collapsible-header blue darken-1"><a class="waves-effect waves-light btn-small">Edit</a>
+                                  <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                                  <i ></i>{{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
+                                <div class="collapsible-body"><span> {{ result.additional_info }}</span></div>
+                            </li>
+                        </ul>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+                        
             </div>
         </div>
-    </div>
-</div> 
 {% endblock %}

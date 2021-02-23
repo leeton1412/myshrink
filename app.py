@@ -131,17 +131,20 @@ def addshrink():
         return redirect(url_for("get_shrink"))
     # Get department categories
     department = mongo.db.shrinkDb.find().sort("department", 1)
-    return render_template("add-shrink.html", department=department
+    return render_template("add-shrink.html", department=department)
 
 
 @app.route("/edit_shrink/<shrink_id>", methods=["GET", "POST"])
 def edit_shrink(shrink_id):
-    
+    shrink = mongo.db.shrinkDB.find_one({"_id": ObjectId(shrink_id)})
+
+    department = mongo.db.shrinkDb.find().sort("department", 1)
+    return render_template(
+        "edit-shrink.html", shrink=shrink, department=department)
+
 
 
 # Dont forget to remove debug
-
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
