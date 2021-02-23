@@ -160,6 +160,15 @@ def edit_shrink(shrink_id):
         "edit-shrink.html", shrink=shrink, department=department)
 
 
+@app.route("/delete_shrink/<shrink_id>")
+def delete_shrink(shrink_id):
+    mongo.db.shrinkDB.remove({"_id": ObjectId(shrink_id)})
+    flash("Shrink Deleted")
+    return redirect(url_for("get_shrink"))
+
+
+
+
 # Dont forget to remove debug
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
