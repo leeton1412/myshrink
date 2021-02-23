@@ -93,7 +93,6 @@ def profile(username):
         {"department": user_department}).limit(20).sort(
         "amount_lost_value", -1,))
     if session["user"]:
-        print(filtered_results)
         return render_template(
             "profile.html", username=username,
             filtered_results=filtered_results)
