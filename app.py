@@ -167,9 +167,12 @@ def delete_shrink(shrink_id):
     return redirect(url_for("get_shrink"))
 
 
-@app.route("/search_shrink")
+@app.route("/search_shrink", methods=["GET", "POST"])
 def search_shrink():
-    return render_template("search-shrink.html")
+    search = request.form.get("search")
+    shrink = list(mongo.db.shrinkDB.find({"$text": {"$search": search}}))
+    print(shrink)
+    return render_template("search-shrink.html", shrink=shrink)
 
 
 
