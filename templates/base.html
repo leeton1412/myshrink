@@ -31,7 +31,7 @@
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Search Shrink</a></li>
+                    <li><a href="{{ url_for('search_shrink') }}">Search Shrink</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li> 
@@ -47,7 +47,7 @@
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Search Shrink</a></li>
+                    <li><a href="{{ url_for('search_shrink') }}">Search Shrink</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li> 
                     <li><a href="{{ url_for('register') }}">Register</a></li> 

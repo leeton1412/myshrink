@@ -167,6 +167,10 @@ def delete_shrink(shrink_id):
     return redirect(url_for("get_shrink"))
 
 
+@app.route("/search_shrink")
+def search_shrink():
+    return render_template("search-shrink.html")
+
 
 
 # Dont forget to remove debug

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="myshrink-banner">
+    <div class="myshrink-header">
+        <h1> SEARCH SHRINK }} </h1>
+    </div>
+</div>
+<!--Department shrink -->
+<h4>Search Shrink</h4>
+    <div class="row">
+        <form action="{{ url_for('search_shrink') }}" method="post">
+            <div class="row valign-wrapper center-algin">
+                <div class="input-field col s12">
+                    <input type="text" name="search" id="search" class="validate">
+                </div>
+
+            </div>
+        </form>
+            <div class="col s12 m6">
+                <h4>Top Shrink Department</h4>
+                <div class="card-panel light-blue left-align">
+                    <span class="white-text">
+                        {% for result in filtered_results %}
+                            {% if not result.resolved %}
+                            <ul class="collapsible blue darken-1">
+                                <li>
+                                    <div class="collapsible-header blue darken-1"><a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                                    <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                                    <i ></i>{{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
+                                    <div class="collapsible-body"><span> {{ result.additional_info }}</span></div>
+                                </li>
+                            </ul>
+                            {% endif %}
+                        {% endfor %}
+                    </span>
+                            
+                </div>
+            </div>
+    </div>
+
+{% endblock %}
