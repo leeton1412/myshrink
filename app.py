@@ -169,11 +169,14 @@ def delete_shrink(shrink_id):
 
 @app.route("/search_shrink", methods=["GET", "POST"])
 def search_shrink():
-    search = request.form.get("search")
-    shrink = list(mongo.db.shrinkDB.find({"$text": {"$search": search}}))
-    print(shrink)
-    return render_template("search-shrink.html", shrink=shrink)
-
+    shrink = mongo.db.shrinkDB.find()
+    if request.method == "POST":
+        search = request.form.get("search")
+        shrinksearch = list(mongo.db.shrinkDB.find(
+            {"$text": {"$search": search}}))
+        return render_template(
+            "search-shrink.html", shrinksearch=shrinksearch, shrink=shrink)
+    return render_template("search-shrink.html")
 
 
 # Dont forget to remove debug
