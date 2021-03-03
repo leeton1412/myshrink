@@ -1,4 +1,18 @@
-  //Materialize Jquery
+// Sticky Nav on Scroll
+window.onscroll = function() {stickynav()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickynav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky-nav")
+  } else {
+    navbar.classList.remove("sticky-nav");
+  }
+}
+ 
+ //Materialize Jquery
 $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.datepicker').datepicker({
@@ -10,7 +24,15 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
   });
 
-  // select box on register
-   // $(document).ready(function(){
-  //  $('select').formSelect();
-//  });
+window.onscroll = function() {stickynav()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickynav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky-nav")
+  } else {
+    navbar.classList.remove("sticky-nav");
+  }
+}

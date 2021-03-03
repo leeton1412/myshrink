@@ -21,9 +21,9 @@
 
     <!-- Materializa Nav bar -->
 
-    <nav class="light-blue accent-4">
+    <nav class="light-blue accent-4" id="navbar">
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">MyShrink</a>
+            <a href="{{ url_for('get_shrink') }}" class="brand-logo">MyShrink</a>
             <a href="#" data-target="mobile-collapse" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_shrink') }}">Home</a></li> 
