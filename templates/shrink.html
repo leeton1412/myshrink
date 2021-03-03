@@ -7,7 +7,6 @@
 </div>
 <div class="container">
 <div class="row">
-
 <!-- Materialize card panel 1 -->
 <div class="col s12 m4 center-align">
    <div class="card">
@@ -31,8 +30,6 @@
       </div>
    </div>
 </div>
-
-
 <!-- Materialize card panel 2 -->
 <div class="col s12 m4 offset-m4 center-align">
    <div class="card">
@@ -60,103 +57,65 @@
       </div>
    </div>
 </div>
-
 <!--Shrink button-->
-<div class="col s12">   
-    <div class="row center-align">  
-        <a class="waves-effect waves-light btn light-blue accent-4" href="{{ url_for('addshrink') }}">Add Shrink</a>
-    </div>
+<div class="col s12">
+   <div class="row center-align">  
+      <a class="waves-effect waves-light btn light-blue accent-4" href="{{ url_for('addshrink') }}">Add Shrink</a>
+   </div>
 </div>
-
 <div class="shrink-tracker-title">
-    <h3 class="center-align">Top Line view</h3>
+   <h3 class="center-align">Top Line view</h3>
 </div>
 <!--Shrink cards using Materialize Top 5 store lines day-->
-  <div class="row center-align">
+<div class="row center-align">
     <div class="col s12 m6">
-            <h4>Top Shrink Threats</h4>
-        <div class="row">
-            <div class="card-panel light-blue left-align">
-                <span class="white-text">
-                    {% for shrink in shrinkDB %}
-                        {% if not shrink.resolved %}
-                        <ul class="collapsible blue darken-1">
-                            <li>
-                                <div class="collapsible-header blue darken-1">
-                                    <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small button-style">Edit</a>
-                                    <a class="waves-effect waves-light btn-small red lighten-1 button-style">Delete</a>
-                                  <i ></i><span class="media-text">{{ shrink.product_name }}<br>£{{ shrink.amount_lost_value }}</span></div>
-                                <div class="collapsible-body">
-                                    <span> {{ shrink.additional_info }}</span> <br>
-                                    <span> {{ shrink.date }} </span>
-                                </div>
-                            </li>
-                        </ul>
-                        {% endif %}
-                    {% endfor %}
-                </span>
-                        
-            </div>
-
-            
-        </div>
-        
-        
-    </div>
-        <div class="col s12 m6">
-            <h4>Top Shrink Resolves</h4>
-        <div class="row">
-            <div class="card-panel light-blue left-align">
-                <span class="white-text">
-                    {% for shrink in shrinkDB %}
-                        {% if shrink.resolved %}
-                        <ul class="collapsible blue darken-1">
-                            <li>
-                                <div class="collapsible-header blue darken-1"><a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                                  <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
-                                  <i ></i><span class="media-text">{{ shrink.product_name }} <br>£{{ shrink.amount_lost_value }}</span></div>
-                                <div class="collapsible-body">
-                                    <span> {{ shrink.additional_info }}</span> <br>
-                                    <span> {{ shrink.date }} </span>
-                                </div>
-                            </li>
-                        </ul>
-                        {% endif %}
-                    {% endfor %}
-                </span>
-                        
-            </div>
-
-            
-        </div>
-    
-
-        
- <!--     <div class="card-panel light-blue">
-        <span class="white-text">
-<!--Shrink For loop top 5->
-               {% for shrink in shrinkDB %}
-                    {% if shrink.resolved == false %}
-                        <li>{{ shrink.product_name }} ||£ {{ shrink.amount_lost_value }} || {{ shrink.date }}</li> 
-                    {% endif %}    
-               {% endfor %}
-        </span>
-      </div>
-    </div>
-    <div class="col s12 m5 offset-m2">
-        <h4>Top Resolved Threats</h4>
-      <div class="card-panel light-blue">
-        <span class="white-text">
-<!-- Shrink For loop top 5 resolves->
-            {% for shrink in shrinkrs %}
-                {% if shrink.resolved == true %}
-                        <li>{{ shrink.product_name }} ||£ {{shrink.amount_lost_value }} || {{ shrink.date }}</li> 
+    <h4>Top Shrink Threats</h4>
+    <div class="row">
+        <div class="card-panel light-blue left-align">
+            <span class="white-text">
+                {% for shrink in shrinkDB %}
+                {% if not shrink.resolved %}
+                <ul class="collapsible blue darken-1">
+                <li>
+                    <div class="collapsible-header blue darken-1">
+                        <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small button-style">Edit</a>
+                        <a class="waves-effect waves-light btn-small red lighten-1 button-style">Delete</a>
+                        <i ></i><span class="media-text">{{ shrink.product_name }}<br>£{{ shrink.amount_lost_value }}</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <span> {{ shrink.additional_info }}</span> <br>
+                        <span> {{ shrink.date }} </span>
+                    </div>
+                </li>
+                </ul>
                 {% endif %}
-            {% endfor %}
-        </span>
-      </div>
+                {% endfor %}
+            </span>
+        </div>
     </div>
-
-  </div>-->
-
+</div>
+<div class="col s12 m6">
+<h4>Top Shrink Resolves</h4>
+<div class="row">
+   <div class="card-panel light-blue left-align">
+      <span class="white-text">
+         {% for shrink in shrinkDB %}
+         {% if shrink.resolved %}
+         <ul class="collapsible blue darken-1">
+            <li>
+               <div class="collapsible-header blue darken-1"><a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                  <a class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                  <i ></i><span class="media-text">{{ shrink.product_name }} <br>£{{ shrink.amount_lost_value }}</span>
+               </div>
+               <div class="collapsible-body">
+                  <span> {{ shrink.additional_info }}</span> <br>
+                  <span> {{ shrink.date }} </span>
+               </div>
+            </li>
+         </ul>
+         {% endif %}
+         {% endfor %}
+      </span>
+   </div>
+</div>
 {% endblock %}
