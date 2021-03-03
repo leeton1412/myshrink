@@ -1,9 +1,14 @@
 /* Google Fonts import */  
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 
 /* General styles */
 body{
     font-family: 'Noto Sans', sans-serif;
+}
+
+.brand-logo{
+    margin-left: 5px;
 }
 
 .myshrink-banner {
@@ -22,6 +27,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-family: 'Rajdhani', sans-serif;
     
 }
 
@@ -44,16 +50,33 @@ li{
     padding-bottom:15px;
 }
 
+/* Nav-bar styling */ 
+
 .sticky-nav{
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-#banner{
-    margin-top: 50px;
-}
-
 #navbar{
     z-index: 9999;
+}
+
+/* Shrink Page styling */
+
+.btn-small{
+    margin-right: 20px;
+}
+
+/*media queries */ 
+@media only screen and (max-width: 600px) {
+  .btn-small {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+    .media-text{
+        font-size: 10px;
+    }
 }
