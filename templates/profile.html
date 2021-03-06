@@ -6,10 +6,11 @@
     </div>
 </div>
 <!--Department shrink -->
-<div class="container center-align">
+<div class="container">
     <div class="row">
         <div class="col s12 m6">
-            <h4>Top Shrink Department</h4>
+            <h4 class="center-align">Top Shrink Department</h4>
+            {% if filtered_results|length > 0 %}
             <div class="card-panel light-blue">
                 <span class="white-text">
                     {% for result in filtered_results %}
@@ -23,17 +24,20 @@
                                 <div class="collapsible-body"><span> {{ result.additional_info }}</span></div>
                             </li>
                         </ul>
+                </span>
                         {% endif %}
                     {% endfor %}
-                </span>
-                        
             </div>
         </div>
+        {% endif %}
     <!-- Resolved shrink-->
+</div>
+<div class="container">
     <div class="row">
         <div class="col s12 m6">
-            <h4>Top Resolve Department</h4>
-            <div class="card-panel light-blue left-align">
+            <h4 class="center-align">Top Resolve Department</h4>
+         {% if filtered_results|length > 0 %}
+            <div class="card-panel light-blue ">
                 <span class="white-text">
                     {% for result in filtered_results %}
                         {% if result.resolved %}
@@ -48,8 +52,12 @@
                         {% endif %}
                     {% endfor %}
                 </span>
-                        
             </div>
+        
         </div>
+   </div>     
+   
 </div>
+{% endif %}
+
 {% endblock %}
