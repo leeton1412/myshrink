@@ -16,7 +16,8 @@
                         {% if not result.resolved %}
                         <ul class="collapsible blue darken-1">
                             <li>
-                                <div class="collapsible-header blue darken-1"><a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                                <div class="collapsible-header blue darken-1">
+                                  <a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
                                   <a class="waves-effect waves-light btn-small red lighten-1" href="{{ url_for('delete_shrink', shrink_id=result._id) }}">Delete</a>
                                   <i ></i>{{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
                                 <div class="collapsible-body"><span> {{ result.additional_info }}</span></div>

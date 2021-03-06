@@ -34,7 +34,9 @@
                         <ul class="collapsible blue darken-1">
                             <li>
                                 <div class="collapsible-header blue darken-1">
-                                  <i ></i>{{ shrink.product_name}} || £ {{ shrink.amount_lost_value }}</div>
+                                <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                                <a class="waves-effect waves-light btn-small red lighten-1" href="{{ url_for('delete_shrink', shrink_id=shrink._id) }}">Delete</a>
+                                  <i ></i>{{ shrink.product_name}} ||£{{ shrink.amount_lost_value }}</div>
                                 <div class="collapsible-body">
                                     <span> Information: {{ shrink.additional_info }}</span><br>
                                     <span> Date: {{ shrink.date }}</span><br>
