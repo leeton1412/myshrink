@@ -28,6 +28,7 @@ body{
   transform: translate(-50%, -50%);
   color: white;
   font-family: 'Rajdhani', sans-serif;
+  background-color: hsla(0, 100%, 90%, 0.3);
     
 }
 
