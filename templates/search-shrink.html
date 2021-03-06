@@ -13,7 +13,7 @@
             <div class="row valign-wrapper center-algin">
                 <div class="input-field col s12">
                     <input type="text" name="search" id="search" class="validate" minlength="3" required>
-                    <label for="search">Enter department or product</label>
+                    <label for="search">Search For Shrink</label>
                 </div>
     </div>
                 <div class="row">
@@ -25,14 +25,14 @@
         </form>
 </div>
  <!--Search Field-->          
- <div class="row">
+    <div class="row">
         <div class="col s12 m12">
-            <h4>Display Shrink</h4>
+            <h4 class="center-align">Display Shrink</h4>
+            {% if shrinksearch|length > 0 %}
+                {% for shrink in shrinksearch %}
             <div class="card-panel light-blue left-align">
-                <span class="white-text">
                         <ul class="collapsible blue darken-1">
                             <li>
-                    {% for shrink in shrinksearch %}
                                 <div class="collapsible-header blue darken-1">
                                   <i ></i>{{ shrink.product_name}} || £ {{ shrink.amount_lost_value }}</div>
                                 <div class="collapsible-body">
@@ -40,14 +40,16 @@
                                     <span> Date: {{ shrink.date }}</span><br>
                                     <span> Department: {{ shrink.department.upper() }}</span><br>
                                     <span> Employee: {{ shrink.employee.upper() }}</span>
-
                                 </div>
                             </li>
+                {% endfor %}
                         </ul>
-                    {% endfor %}
-                </span>
-                        
-            </div>
+              </div>
+            {% else %}
+                            
+                        <h3 class="center-align red-text"> NO SHRINK FOUND </h3>
+                               
+            {% endif %}
         </div>
 
 {% endblock %}
