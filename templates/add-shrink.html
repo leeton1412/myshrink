@@ -13,7 +13,7 @@
 <!-- Department Selector -->
                 <div class="input-field col s12">
                     <select id="department" name="department" class="validate" required>
-                            <option value="" disabled selected>Choose Department</option>
+                            <option value="" disabled selected>Choose Department*</option>
 <!-- Department Jinja Loop -->
                         {% for departments in department %}
                             <option value="{{ departments.department }}"> {{ departments.department.upper() }} </option>
@@ -26,7 +26,7 @@
 <!-- Product Name -->
                 <div class="input-field col s12 m6">
                     <input id="product_name" type="text" class="validate" name="product_name" minlength="3" maxlength="30" pattern="^[a-zA-Z0-9]{3,16}$"  required>
-                    <label for="product_name">Product Name</label>
+                    <label for="product_name">Product Name*</label>
                 </div>
             </div>
             <div class="row">
@@ -40,14 +40,14 @@
 <!-- Loss in £'s -->
                 <div class="input-field col s12 m6">
                     <input id="amount_lost_value" type="text" pattern="[0-9]+" class="validate" name="amount_lost_value" minlength="1" maxlength="30" required>
-                    <label for="product_name">Amount In £ No Decimal</label>
+                    <label for="product_name">Amount In £ No Decimal*</label>
                 </div>
             </div>
             <div class="row">
 <!-- Loss in units -->
                 <div class="input-field col s12 m6">
                     <input id="amount_lost_singles" type="text" pattern="[0-9]+" class="validate" name="amount_lost_singles" minlength="1" maxlength="30" required>
-                    <label for="product_name">Amount In Singles</label>
+                    <label for="product_name">Amount In Singles*</label>
                 </div>
             </div>
             <div class="row">
@@ -61,7 +61,7 @@
 <!-- Date of loss -->
                 <div class="input-field col s12 m6">
                     <input id="date" type="text" class="datepicker validate" name="date" required>
-                    <label for="date">Date Of Loss</label>
+                    <label for="date">Date Of Loss*</label>
                 </div>
             </div>            
             <div class="row">
