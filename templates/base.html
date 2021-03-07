@@ -71,14 +71,17 @@
     {% endblock %}
 
 <!--float Button -->
-<div class="action float">
+<div class="float center-align" onclick="floatToggle()">
     <div class="row">
-        <div class="col s1">
-            <span><i class="fas fa-plus-circle"></i></span>
+        <div class="col s12">
+            <span id="plus-float"> + </span>
             <ul>
-                <li><i class="fas fa-cart-plus"></i>Add Shrink</li>
-                <li><i class="fas fa-sign-out-alt"></i>Log Out</li>
-                <li><i class="fas fa-sign-in-alt"></i>Log In</li>
+                <li><i class="fas fa-cart-plus">-</i><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
+                {% if session.user %}
+                <li><i class="fas fa-sign-out-alt">-</i><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                <li><i class="fas fa-sign-in-alt">-</i> <a href="{{ url_for('login') }}">Log In</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>
