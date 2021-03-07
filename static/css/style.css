@@ -51,6 +51,17 @@ li{
     padding-bottom:15px;
 }
 
+.float{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.1);
+    z-index: 9999;
+}
+
 /* Nav-bar styling */ 
 
 .sticky-nav{
