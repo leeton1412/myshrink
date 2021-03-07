@@ -146,6 +146,15 @@ li a:hover{
   }
 }
 
+@media (max-width:1250px) and (min-width:600px) {
+  .btn-small {
+    margin-right: 0px;
+  }
+  .media-shrink {
+      text-align: left;
+  }
+}​
+
 @media only screen and (max-width: 600px){
     .media-text{
         font-size: 10px;
