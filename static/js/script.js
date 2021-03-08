@@ -24,6 +24,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
   });
 
+// Float Toggle Set Up
 window.onscroll = function() {stickynav()};
 
 var navbar = document.getElementById("navbar");
