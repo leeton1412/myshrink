@@ -11,6 +11,13 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+<!--Email JS-->
+    <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type= "text/javascript">
+        (function() {
+            emailjs.init("user_OwqvlEjmm8ba3XzaMNZac");
+            })();
+    </script>
 
     {% block styles %}
     {% endblock %}
@@ -32,10 +39,12 @@
                     <li><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
                     <li><a href="{{ url_for('search_shrink') }}">Search Shrink</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li> 
                 {% endif %}
              </ul>
@@ -48,9 +57,11 @@
                     <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
                     <li><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('search_shrink') }}">Search Shrink</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('get_shrink') }}">Home</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li> 
                     <li><a href="{{ url_for('register') }}">Register</a></li> 

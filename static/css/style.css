@@ -13,6 +13,9 @@ body{
     flex: 1 0 auto;
   }
 
+.edit-link a:link{
+    text-decoration: none;
+}
 .brand-logo{
     margin-left: 5px;
 }
@@ -163,7 +166,7 @@ li a:hover{
   }
 }​
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     .media-text{
         font-size: 10px;
     }
@@ -182,4 +185,9 @@ li a:hover{
 /* login form */
 .login-form{
     margin-top: 30px;
+}
+
+/* Contact Form */
+.contact-button{
+    padding-bottom: 10px;
 }

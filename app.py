@@ -179,6 +179,11 @@ def search_shrink():
     return render_template("search-shrink.html")
 
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
 # Dont forget to remove debug
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

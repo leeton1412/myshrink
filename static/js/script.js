@@ -35,3 +35,27 @@ function floatToggle(){
     action.classList.toggle('active')
 
 }
+
+// Emailjs
+
+function sendMail(contactForm){
+    emailjs.send("shrink", "shrink", {
+        "from_name": contactForm.first_name.value,
+        "from_email": contactForm.email.value,
+        "suggestion_idea": contactForm.message.value,
+    })
+    .then(
+        function(){
+            alert('Thank You')
+            var form = document.getElementById("myForm")
+            form.reset();    
+        
+        },
+        
+        function(){
+            alert('Your email could not be sent at this time')
+        }
+    )
+ return false; 
+
+}
