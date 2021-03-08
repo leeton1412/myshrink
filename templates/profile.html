@@ -19,7 +19,7 @@
                                 <div class="collapsible-header blue darken-1">
                                   <a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
                                   <a class="waves-effect waves-light btn-small red lighten-1" href="{{ url_for('delete_shrink', shrink_id=result._id) }}">Delete</a>
-                                  <i ></i>{{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
+                                  {{ result.product_name}} || £ {{ result.amount_lost_value }}</div>
                                 <div class="collapsible-body"><span class="media-shrink"> {{ result.additional_info }}</span></div>
                             </li>
                         </ul>
