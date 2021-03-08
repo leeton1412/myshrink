@@ -21,7 +21,7 @@ body{
 }
 
 h1, h2, h3, h4, h5{
-    background-color: hsla(0, 100%, 90%, 0.3);
+    background-color: hsla(182, 100%, 90%, 0.322);
 }
 
 .myshrink-banner {
@@ -71,8 +71,8 @@ li{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: grey;
-    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.1);
+    background-color: lightblue;
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.123);
     z-index: 9999;
 }
 
@@ -95,7 +95,7 @@ li{
 .float ul{
     position:absolute;
     bottom: 55px;
-    background: grey;
+    background: lightblue;
     min-width: 250px;
     padding: 20px;
     opacity: 0;
@@ -155,6 +155,9 @@ li a:hover{
   .btn-small {
     margin-right: 0px;
   }
+    .media-text{
+    font-size: 10px;
+    }
 }
 
 @media (max-width:1250px) and (min-width:600px) {
@@ -164,13 +167,10 @@ li a:hover{
   .media-shrink {
       text-align: left;
   }
-}​
-
-@media only screen and (max-width: 600px) {
     .media-text{
-        font-size: 10px;
+    font-size: 10px;
     }
-}
+}​
 
 /* Shrink add */ 
 .shrink-add{
