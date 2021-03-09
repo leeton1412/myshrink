@@ -2,30 +2,37 @@
 
 ![Responsive screen grab of homepage](static/assets/responsive-screen-shot.png)
 
-A website built to help people combine their friendships and competitive nature. 
-The website will contain a javaScript based tournament system that can be used as a extra resource when friends gather together.
+A website built to help managers in Tesco bridge their skill gap with Shrink. 
+The website will be powered by a Mongodb that contains the inputed shrink from the managers.
 
 ## Ease of use
 
-Most current tournament based sites require registration and a fee. This site will build a bracket based on the amount of players and progress them on button click.
-There is no need for any registration or fees as it is all client-side based. 
+Really looking after your shrink can be challenging for many managers. This is due to a skill gap between being able to use Tesco SBO system and
+being able to adequetly track it. The site will have registered members log in and enter the shrink manually. It will then be submitted to a Mongodb
+that will be able to be edited, deleted, searched and added to. 
 
-### Supported Brackets
+### Supported Departments
 
 The site currently supports:
-* 2 players
-* 4 players
-* 8 players
+* GM
+* FRESH FOOD
+* PRODUCE
 
-Onclick events will trigger the amount of brackets to generate. Players will then enter their names into the brackets.
-- ![Bracket before loading](assets/images/bracket-loads.jpg)
+A Duty Manager will visted the app in the morning and log in. After this they will enter the top lines for the store into the database via the app
+- ![Add Shrink Page]()
 
 
 
-If the individual wins their match, clicking the icon next to their name will progress them through the brackets. It will alert() the winners name.
-- ![After load and win](assets/images/new-win.jpg)
+After this the user will be redirected to the Home page where they can Edit if entered inncorrectly.
+- ![Home Page Edit]()
 
-It can be used on all devices, but the site will alert() to state if the screen needs rotating.
+Any Manager can log on to view their own shrink and from here they can also edit, delete and resolve shrink issues.
+- ![Profile Page for Managers Shrink]()
+
+A Manager can also visit the search function which will enable them to search for more shrink if they wish to see additional information.
+- ![Search Page]()
+
+It can be used on all devices.
 
 Hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
 Repository on [GitHub.com](https://github.com/leeton1412/bronament)
@@ -38,24 +45,23 @@ Repository on [GitHub.com](https://github.com/leeton1412/bronament)
 
 ### Goals
 
-The aim of this website is to provide a quick, easy to use, and intuative system so friends can quickly build and play tournaments between each other
+The aim of this website is to provide a quick, easy to use, and intuative system so managers can quickly view their shrink
 
 ### Users
 
-The predicted users of the site will be Friendship Groups, Tournament Organisers, Gaming Websites and Small Event Organisers.
+The predicted users of the site will be Managers, Area Directors, Colleagues and Depots.
 
 ### User Stories 
-1. A group of friends looking to compete against each other in a tournament environment.
-2. Tournament Organisers looking to create a more simplictic approach.
-3. Tournament Organisers looking for a cheaper approach for smaller events.
-4. Gaming websites looking to create articles on Esports.
-5. A Small event Organiser looking to find a quick solution to an Esports competitive tournament setting.
-6. Fans of Esports who wish to create their own brackets and predict player movement.
+1. Managers looking to view their shrink to see what needs investigating.
+2. Area Managers looking for a quick and accurate view of a stores shrink level.
+3. Colleagues looking to take a bigger role within their store.
+4. Depots looking for a more store driving view to help assist them with the performance management.
+5. Managers looking to find out what theyve done for shrink before their performance reviews.
 
 ### Thoughts Behind The Design
 
-The website colors and fonts are designed to give the page a dark intense feel. Having competed in Esports, the feeling of an intense atmosphere is something I can relate to.
-I believe that this sort of feeling is important to give the site a competitive feeling.
+The app is designed using Materialize to elp comply to good UX design. The colors are chosen to match those of similar apps
+avaliable to Tesco colleagues to try give a familiar feel to it.
 
 ### Colors and theme of the website.
 
