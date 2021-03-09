@@ -34,9 +34,9 @@
             <div class="card-panel light-blue left-align">
                         <ul class="collapsible blue darken-1">
                             <li>
-                                <div class="collapsible-header blue darken-1 white-text">
-                                    <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                                    <a class="waves-effect waves-light btn-small red lighten-1" href="{{ url_for('delete_shrink', shrink_id=shrink._id) }}">Delete</a>
+                                <div class="collapsible-header blue darken-1 white-text search-button">
+                                    <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small center-algin">Edit</a>
+                                    <a class="waves-effect waves-light btn-small red lighten-1 " href="{{ url_for('delete_shrink', shrink_id=shrink._id) }}">Delete</a>
                                     <i class="fas fa-apple-alt"></i>{{ shrink.product_name}}<br>
                                     <i class="fas fa-pound-sign"></i>£{{shrink.amount_lost_value}}
                                 </div>

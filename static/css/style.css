@@ -191,3 +191,7 @@ li a:hover{
 .contact-button{
     padding-bottom: 10px;
 }
+
+.search-button{
+    align-content: center;
+}
