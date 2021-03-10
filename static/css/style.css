@@ -45,6 +45,11 @@ h1, h2, h3, h4, h5{
     
 }
 
+#map{
+    width: fit-content;
+    height: fit-content;
+}
+
 .btn{
     margin-top: 20px;
 }

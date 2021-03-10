@@ -60,3 +60,14 @@ function sendMail(contactForm){
  return false; 
 
 }
+
+// GoogleMap 
+
+function initMap(){
+    var options = {
+        zoom:2,
+        center:{lat:52.6796,lng:0.3216} 
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), options);
+}
