@@ -40,6 +40,23 @@ Repository on [GitHub.com](https://github.com/leeton1412/bronament)
 ## License
 >This project is created for everyone and is avaliable upon request [Bro-nament](https://github.com/leeton1412/bronament). 
 
+## Database Design
+
+### Which Database?
+
+The choice I have made for the Database is [MongoDB](https://www.mongodb.com/3). The simple nature of it means that easy interaction is very much achievable which is the sites main aim.
+Though was put into using MySQL but with MongoDB large amounts of information can be stored and easily manipulate. Simplicity is the key in bridging the skill gap
+
+### Database structure
+
+For this project I decided that i would use 3 Databases.
+- shrinkDB
+    - This is the main database where information for all shrink is stored.
+- shrinkDb
+    - This Database is mainly used to store the Departments to make sure a accurate department is selected making it easier to manipulate the database to what I need.
+        The Database name does need to be changed at a later date but due to time restrictions i was unable to obtain this
+- userDB
+    - This Database will be used to store user credentials. With this I will be able to generate the correct information needed for the specific Team Manager
 
 ## UX
 
@@ -60,15 +77,17 @@ The predicted users of the site will be Managers, Area Directors, Colleagues and
 
 ### Thoughts Behind The Design
 
-The app is designed using Materialize to elp comply to good UX design. The colors are chosen to match those of similar apps
-avaliable to Tesco colleagues to try give a familiar feel to it.
+- ![Inform Screen grab](static/assets/user-home.png)
+The app is designed using Materialize to help comply to good UX design. The colors are chosen to match those of similar apps
+avaliable to Tesco colleagues to try give a familiar feel to it, namly Inform
 
 ### Colors and theme of the website.
 
-* Revolver:   ![#333238](https://via.placeholder.com/15/333238/333238)
-* Manatee:   ![#94929b](https://via.placeholder.com/15/94929b/94929b)
-* Black: ![#000000](https://via.placeholder.com/15/000000/000000)
-* Cloudy: ![#aba599](https://via.placeholder.com/15/413f3f/413f3f)
+Materialize Easy to Use color scheme is used throughout to give a clean feel to the page.
+
+* Blue Darken-1:   ![#1e88e5](https://via.placeholder.com/15/1e88e5/1e88e5)
+* Light Blue:   ![#94929b](https://via.placeholder.com/15/03a9f4/03a9f4)
+* Red Lighten -1: ![#ef5350](https://via.placeholder.com/15/ef5350/ef5350)
 
 ### Font Choices 
 Header font throughout the website are chosen to mimic a Retro Gaming feel:
