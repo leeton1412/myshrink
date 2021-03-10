@@ -32,7 +32,7 @@
                 <!-- Product Name -->
                 <div class="input-field col s12 m6">
                     <input id="product_name" type="text" class="validate" name="product_name" minlength="3"
-                        maxlength="30" pattern="^[a-zA-Z0-9]{3,16}$" required value="{{ shrink.product_name }}">
+                        maxlength="30" pattern="^[a-zA-Z0-9 ]{3,16}$" required value="{{ shrink.product_name }}">
                     <label for="product_name">Product Name</label>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <!-- Product Location -->
                 <div class="input-field col s12 m6">
                     <input id="product_location" type="text" class="validate" name="product_location" minlength="3"
-                        maxlength="30" pattern="^[a-zA-Z0-9]{3,30}$" value="{{ shrink.product_location }}">
+                        maxlength="30" pattern="^[a-zA-Z0-9 ]{3,30}$" value="{{ shrink.product_location }}">
                     <label for="product_location">Location (i.e 12L6b)</label>
                 </div>
             </div>

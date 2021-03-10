@@ -15,13 +15,13 @@
                 <div class="col s12 m6">
                     <div class="input-field col s12 m6">
                         <input placeholder="Bruce" id="first_name" type="text" class="validate" name="first_name">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name">First Name*</label>
                     </div>
                 </div>        
                     <div class="col s12 m6">
                     <div class="input-field col s12 m6">
                         <input type="text" name="last_name" id="last_name" class="validate" placeholder="Wayne">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name">Last Name*</label>
                     </div>
                     </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="col s12">
                     <div class="input-field">
                         <input placeholder="jim@gmail.com" id="email" type="email" class="validate" name="email">
-                        <label for="email">Enter Contact Email</label>
+                        <label for="email">Enter Contact Email*</label>
                     </div>
                 </div>
             </div>
@@ -38,13 +38,14 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea id="message" class="materialize-textarea" name="message"></textarea>
-                            <label for="message">Enter Message here</label>
+                            <label for="message">Enter Message here*</label>
                         </div>
                     </div>
                 </div>            
             </div>
             <div class="row center-align">
                 <div class="col s12">
+                    <a href="{{ url_for('get_shrink') }}" class="btn-small waves-effect waves-light red lighten-1">Cancel</a>
                     <button class="btn-small waves-effect waves-light center-align contact-button" type="submit">
                         Submit Shrink
                     </button>

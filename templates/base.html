@@ -90,9 +90,11 @@
         <div class="col s12">
             <span id="plus-float"> + </span>
             <ul>
-                <li><i class="fas fa-cart-plus">-</i><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
+                <li><i class="fas fa-home"></i><a href="{{ url_for('get_shrink') }}">Home</a></li>
                 {% if session.user %}
+                
                 <li><i class="fas fa-sign-out-alt">-</i><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><i class="fas fa-cart-plus">-</i><a href="{{ url_for('addshrink') }}">Add Shrink</a></li>
                 {% else %}
                 <li><i class="fas fa-sign-in-alt">-</i> <a href="{{ url_for('login') }}">Log In</a></li>
                 {% endif %}
@@ -109,11 +111,11 @@
 
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">useful Tesco logins</h5>
+                <h5 class="white-text">Tesco Apps</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Inform</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">ourtesco</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">onelogin</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://labs.ocset.net/inform" target="_blank">Inform</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.ourtesco.com/" target="_blank">OurTesco</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://login.ourtesco.com/login2/?return=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmkiOiJodHRwczovL2xvZ2luLm91cnRlc2NvLmNvbS8iLCJhdWQiOiJBQ0NFU1MiLCJpc3MiOiJNT05PUkFJTCIsImV4cCI6MTYxNTQwMDA1MiwicGFyYW1zIjp7fSwibWV0aG9kIjoiZ2V0In0.3Ud_uH0nz2Vi6Q5_9UKnLAd0NrEg1Dj82smQt9GKBPQ#app=" target="_blank">OneLogin</a></li>
                 </ul>
               </div>
             </div>
