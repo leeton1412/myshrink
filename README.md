@@ -19,18 +19,18 @@ The site currently supports:
 * PRODUCE
 
 A Duty Manager will visted the app in the morning and log in. After this they will enter the top lines for the store into the database via the app
-- ![Add Shrink Page]()
+- ![Add Shrink Page](static/assets/user-shrink.png)
 
 
 
 After this the user will be redirected to the Home page where they can Edit if entered inncorrectly.
-- ![Home Page Edit]()
+- ![Home Page Edit](static/assets/user-home.png)
 
 Any Manager can log on to view their own shrink and from here they can also edit, delete and resolve shrink issues.
-- ![Profile Page for Managers Shrink]()
+- ![Profile Page for Managers Shrink](static/assets/user-profile.png)
 
 A Manager can also visit the search function which will enable them to search for more shrink if they wish to see additional information.
-- ![Search Page]()
+- ![Search Page](static/assets/user-search.png)
 
 It can be used on all devices.
 
