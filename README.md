@@ -38,7 +38,7 @@ Hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
 Repository on [GitHub.com](https://github.com/leeton1412/bronament)
 
 ## License
->This project is created for everyone and is avaliable upon request [Bro-nament](https://github.com/leeton1412/bronament). 
+>This project is created for Tesco and is avaliable upon request [MyShrink](https://github.com/leeton1412/myshrink). 
 
 ## Database Design
 
@@ -77,7 +77,7 @@ The predicted users of the site will be Managers, Area Directors, Colleagues and
 
 ### Thoughts Behind The Design
 
-- ![Inform Screen grab](static/assets/user-home.png)
+- ![Inform Screen Grab]()
 The app is designed using Materialize to help comply to good UX design. The colors are chosen to match those of similar apps
 avaliable to Tesco colleagues to try give a familiar feel to it, namly Inform
 
@@ -90,13 +90,13 @@ Materialize Easy to Use color scheme is used throughout to give a clean feel to 
 * Red Lighten -1: ![#ef5350](https://via.placeholder.com/15/ef5350/ef5350)
 
 ### Font Choices 
-Header font throughout the website are chosen to mimic a Retro Gaming feel:
+Header font throughout the website are chosen to obtain a clean look:
 
-    *font-family: 'Monoton', cursive; 
+    *font-family: 'Rajdhani', sans-serif;
 
-Elements such as paragraphs are a complementing font and Bootstrap recommended:
+Elements such as paragraphs are a complementing font:
 
-    *font-family: 'Segoe UI', 'Source Sans Pro', 'Calibri', 'Candara', 'Arial', 'sans-serif';;
+    *font-family: 'Noto Sans', sans-serif;
 
 ### WireFrames 
 
@@ -107,7 +107,7 @@ Here you can see screen shots of the Wire Frames. Due to time restrictions, ther
 ## Features 
 
 - Easy Navigation.
-- Use of external css animation to create Flicker effect and Rotate effect [Animista](https://animista.net/)
+- Use of external Database to create easy interaction [MongoDB](https://www.mongodb.com/3)
 - Hover affects on certain icons.
 - Wikipedia API powered game information ensuring it stays relevant.
     - ![WikiApi](assets/images/wiki-api.jpg) ![WikiApi](assets/images/wikiapi-load.jpg)
