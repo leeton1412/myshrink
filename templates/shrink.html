@@ -83,7 +83,9 @@
                     <ul class="collapsible blue darken-1">
                     <li>
                     <div class="collapsible-header blue darken-1 white-text">
+                        {% if session.user %}
                         <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small button-style">Edit</a>
+                        {% endif %}
                         <p class="media-text"><i class="fas fa-apple-alt"></i>{{ shrink.product_name }}<br>
                         <i class="fas fa-pound-sign"></i>£{{ shrink.amount_lost_value }}</p>
                     </div>
@@ -91,7 +93,6 @@
                   <p class="media-text">Information: {{ shrink.additional_info }}</p> <br>
                   <p class="media-text">Date: {{ shrink.date }} </p><br>
                   <p class="media-text">Department: {{ shrink.department}} </p><br>
-                  <p class="media-text">Employee: {{ shrink.employee.upper() }} </p><br>
                     </div>
                     </li>
                     </ul>
@@ -108,7 +109,9 @@
                 <ul class="collapsible blue darken-1">
                     <li>
                <div class="collapsible-header blue darken-1 white-text">
+                   {% if session.user %}
                   <a href="{{ url_for('edit_shrink', shrink_id=shrink._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                  {% endif %}
                   <p class="media-text"><i class="fas fa-apple-alt"></i>{{ shrink.product_name }}<br>
                   <i class="fas fa-pound-sign"></i>{{ shrink.amount_lost_value }}</p>
                </div>
@@ -116,7 +119,7 @@
                   <p class="media-text">Information: {{ shrink.additional_info }}</p> <br>
                   <p class="media-text">Date: {{ shrink.date }} </p><br>
                   <p class="media-text">Department: {{ shrink.department}} </p><br>
-                  <p class="media-text">Employee: {{ shrink.employee.upper() }} </p><br>
+                  
                </div>
             </li>
          </ul>

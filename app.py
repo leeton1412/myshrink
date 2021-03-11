@@ -141,7 +141,6 @@ def addshrink():
             "additional_info": request.form.get("additional_info"),
             "date": request.form.get("date"),
             "resolved": resolved,
-            "employee": session["user"]
         }
         mongo.db.shrinkDB.insert_one(shrink)
         flash("Shrink Added")
@@ -168,8 +167,7 @@ def edit_shrink(shrink_id):
                 "amount_lost_singles")),
             "additional_info": request.form.get("additional_info"),
             "date": request.form.get("date"),
-            "resolved": resolved,
-            "employee": session["user"]
+            "resolved": resolved
         }
         mongo.db.shrinkDB.update({"_id": ObjectId(shrink_id)}, (edit))
         flash("Shrink Updated")
@@ -226,4 +224,4 @@ def cancel():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
