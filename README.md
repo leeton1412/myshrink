@@ -45,7 +45,8 @@ Repository on [GitHub.com](https://github.com/leeton1412/bronament)
 ### Which Database?
 
 The choice I have made for the Database is [MongoDB](https://www.mongodb.com/3). The simple nature of it means that easy interaction is very much achievable which is the sites main aim.
-Though was put into using MySQL but with MongoDB large amounts of information can be stored and easily manipulate. Simplicity is the key in bridging the skill gap
+Though was put into using MySQL but with MongoDB large amounts of information can be stored and easily manipulate. Simplicity is the key in bridging the skill gap.
+Python3 will be used to call the functions. 
 
 ### Database structure
 
@@ -110,48 +111,42 @@ Here you can see screen shots of the Wire Frames. Due to time restrictions, ther
 - Easy Navigation.
 - Use of external Database to create easy interaction [MongoDB](https://www.mongodb.com/3)
 - Hover affects on certain icons.
-- Wikipedia API powered game information ensuring it stays relevant.
-    - ![WikiApi](assets/images/wiki-api.jpg) ![WikiApi](assets/images/wikiapi-load.jpg)
-- Tournament bracket supporting 2, 4 and 8 players.
+- GoogleMaps Javascript API to show store location.
+- Shrink Add Section supporting 3 Departments.
 - Auto Response email through Email.js
-- Hover.css effect on Links.
-- Links and information on other major tournament sites. 
-- Alert to rota screens on lower widths.
-- Win alerts when a player wins their match.
-- Buttons to hide Wikipedia information so its not displayed on call. 
-- Easy use of "button move" to provide clean client side experience.
-- Countdown intro page using original Street fighter 2 sounds.
-- Auto load on completion of Countdown.
+- Delete Shrink function only avalible to users logged in to ensure data remains safe.
+- Edit Shrink function incase of miss entered information
+- Links to other Tesco Apps that colleagues often find hard to find. 
+- Float Button to help navigate the page to the most important sections easier.
+- Alerts for users login and log out. Also for shrink being added and deleted.
+- Login functionallity putting a user in session. 
+- ERegistration functionallity registering the user to the database.
+- Search Function to allow managers to search and delete all shrink. As this information is sensitive.
+- Profile page displaying that users specific Shrink items.
 - Live contact form using [Emailjs](https://www.emailjs.com).
-- Social Media buttons to create more contact points .
-- Extra content buttons.
+- Collapsible Nav bar using Materialize.
+- Collapisble cards from Materialize containing information on how to use the site and what shrink is.
 - Responsive Mobile first design.
-- [Bootstrap](https://getbootstrap.com/) 
-    - HTML class utilites
+- [Materialize](https://materializecss.com/getting-started.html) 
+    - CSS class utilites
     - Grid system
     - Layout Change
     - Input form
 
 ### Features Still to Include 
 
-Due to limitations with current personal working arrangements and Covid-19, the time I spent on this project did not give me the required time to implement every thing at launch. 
+Due to limitations with current personal circumstances and Covid-19, the time I spent on this project did not give me the required time to implement every thing at launch. 
 
-- Toornament API
-    - I have recieved premission to use [Toornament](https://www.toornament.com/en_US/) API. This will create a much better user experience and a useable server. 
-- Personal Tournament Data.
-    - No current knowledge on servers. Would like to save the information for each user to create a league. 
-    - Register the amount of wins each player has
-- Brackets
-    - Create a better design for the input forms. 
-    - Create a input field by using Javascript onclick to remove the need to hide brackets
-    - Create a way to fill player names in randomly to ensure brackets are fair and random
-    - Better design in javaScript to shorten code for other developers.
-    - Auto fill names in player input bars using Toornament API
-    - Find away to display brackets portrait on Mobile Phones
-    - Link brackets together so people can see their progression clearly. 
-    - Support for more player sizes by including Bye Weeks. 
-- Countdown
-    - Find a way to play sounds without user permission. Sounds will only currently play if allowed in settings.
+- More Department support
+    - Currently the site only supports 3 departments. Ideally this would cover the whole of the store 
+- More Search Functionality.
+    - Original design did not include this, but it has become clear on testing that more search options would make a better user experience. 
+- Multi-Store Support
+    - Currently only one store is supported at launch. Ive multiple stores used the app information would be hard to read and understand 
+    - Another Key Field could be added to help redefine the what information is displayed
+    - Create a way to fill player names in randomly to ensure brackets are fair and random 
+- Shrink Next-Step Form
+    - Feedback I have been given is that a shrink next step form could be very beneficial as we could track what managers are doing following meetings.
 
 
 
@@ -164,25 +159,27 @@ Technologies used in the making of this page are:
 - [CSS](https://www.w3schools.com/whatis/whatis_css.asp)
     - Used to style the website. 
 - [Javascript](https://www.w3schools.com/js/DEFAULT.asp)
-    - Used for Count Down on index.html, Game information on landing.html, Tournament movement and bracket building in tournament.html, and live contact form on contact.html. 
+    - Used for GoogleMaps, Float Button, and live contact form on contact.html. 
 - [Jquery](https://jquery.com/download/)
-    - Used to create brackets for Tournament.html
+    - Used to initialize a varity of functions from Materialize 
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    - Used to help create the app and communicate with Jinja
+- [Pymongo](https://pymongo.readthedocs.io/en/stable/)
+    - Used to interact between python and MongoDB
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+    - Used to create the registration page and salt the users password for protection
 - [Google Chrome](https://www.google.com/chrome/)
     - Used to inspect the website via dev tools.
 - [Google](http://www.google.com)
     - Used to conduct searches
-- [Hover.css](https://ianlunn.github.io/Hover/)
-    - Used to add effects to links. 
-- [Cors-anywhere](https://github.com/Rob--W/cors-anywhere/#documentation)
-    - Used to get passed CORS error
-- [Animista](https://animista.net/)
-    - Used to display effects on Landing page and Tournament page..
-- [Codepen](https://codepen.io/ericagulto/full/KgdyqJ/)
-    - Used to create a simple header and footer.
+- [Python3]
+    - Used to for most functionallity on the site for example, calling the database. 
 - [Emailjs](https://www.emailjs.com/docs/)
     - Used to create a live contact form.
-- [Bootstrap 4](https://getbootstrap.com/)
-    - Used for helping create a mobile responsive website. 
+- [Materialize](https://materializecss.com/getting-started.html)
+    - Used to create a great UX design that is mobile responsive.
+- [GoogleMaps Api](https://developers.google.com/maps/documentation/javascript/get-api-key)
+    - Used to create a Map image in the footer showing the location of the store.
 - [CDN.js](https://cdnjs.com/)
     - Used to import different plugins.
 - [Gitpod](https://www.gitpod.io/)
@@ -193,9 +190,10 @@ Technologies used in the making of this page are:
     - Used to Host the website. 
 - [Am I Responsive?](http://ami.responsivedesign.is/)
     - Used to check the responsive design of the website.
-- [Befunky](https://www.befunky.com/)
-    - Used to resize all images on the website.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    - Used to loop through information from the database and display it accurately.
 
+## Personal Testing
 ## User Testing
 
 The site was tested by users and software. It has been tested on Google Chrome v83.0.4103.97 and Mozilla Firefox v77.0.1 (64) on Acer Ryzen 5 and also 
