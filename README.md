@@ -295,7 +295,7 @@ Used to look for any potential problems.
     
 ### Deployment
 
-The App is deployed on [GitHub Pages](https://leeton1412.github.io/bronament/)
+The App is deployed on [GitHub Pages](https://leeton1412.github.io/myshrink/)
 
 The process:
 - Host a git repository on Github.
@@ -313,7 +313,11 @@ The process:
 - Then go to Herko.com, log in and click create a new App. We Name our app then select Region closest to you and click create app
 - Then we click on the GitHub delpoyment method on the deployment Tab
 - Search for the GitHub Repo we want then click connect
-- 
+- We then go to the reveal config vars option via the settings tab as we have hidden our env.py. From here we input the values that are required
+- Then we push our new files in Gitpod to the Repo.
+- Then back on Heroku we click enable automatic deployment.
+- Then we chose what branches to delpoy and click deploy.
+- Heroku will then build the required packages and deploy the App.
 
 
 ## Credits
