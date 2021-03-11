@@ -77,7 +77,7 @@ The predicted users of the site will be Managers, Area Directors, Colleagues and
 
 ### Thoughts Behind The Design
 
-- ![Inform Screen Grab]()
+- ![Inform Screen Grab](static/assets/inform.jpg)
 The app is designed using Materialize to help comply to good UX design. The colors are chosen to match those of similar apps
 avaliable to Tesco colleagues to try give a familiar feel to it, namly Inform
 
@@ -102,7 +102,8 @@ Elements such as paragraphs are a complementing font:
 
 Here you can see screen shots of the Wire Frames. Due to time restrictions, there could of been more detail involved such as added images.
 
-- ![WireFrame](assets/images/wire-frame-1.jpg) ![WireFrame](assets/images/wire-fram-2.jpg) ![WireFrame](assets/images/wire-frame-3.jpg) ![WireFrame](assets/images/wire-frame-4.jpg) 
+- ![WireFrame](static/assets/wire-1.png) ![WireFrame](static/assets/wire-2.png) ![WireFrame](static/assets/wire-3.png) ![WireFrame](static/assets/wire-4.png)
+   ![WireFrame](static/assets/wire-5.png) ![WireFrame](static/assets/wire-6.png) 
 
 ## Features 
 
