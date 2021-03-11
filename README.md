@@ -228,6 +228,7 @@ This shows a user registering successfully
 This screen shows a user using the search function. Search will not accept partial inputs. Results dont display clean on smaller devices
 
 ![Add Shrink](static/assets/add-test.png)
+
 This shows a user Adding Shrink. It did not accept spaces in product name. This has been fixed
 
 ![Contact Test](static/assets/contact-test.png)
