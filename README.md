@@ -295,7 +295,7 @@ Used to look for any potential problems.
     
 ### Deployment
 
-The App is hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
+The App is deployed on [GitHub Pages](https://leeton1412.github.io/bronament/)
 
 The process:
 - Host a git repository on Github.
@@ -306,9 +306,15 @@ The process:
 - The page is now ready to be viewed.
 - The generic page set up will be 'yourusername'.github.io/'thereponame'
 
-It is Deployed using [Heroku](https://my-shrink.herokuapp.com/)
+It is then Deployed using [Heroku](https://my-shrink.herokuapp.com/)
 The process:
--
+- First we tell Heroku what dependancies are needed using the gitpod terminal and the command *pip3 freeze local > requirements.txt*
+- Then we tell Heroku which file runs the app using the command *echo web: python app.py > Procfile*
+- Then go to Herko.com, log in and click create a new App. We Name our app then select Region closest to you and click create app
+- Then we click on the GitHub delpoyment method on the deployment Tab
+- Search for the GitHub Repo we want then click connect
+- 
+
 
 ## Credits
 
