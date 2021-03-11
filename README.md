@@ -50,13 +50,20 @@ Python3 will be used to call the functions.
 
 ### Database structure
 
+- ![Databases](static/assets/collections.png)
 For this project I decided that i would use 3 Collections.
-- shrinkDB
+
+#### shrinkDB
+ ![shrink Database](static/assets/shrinkDB.png)
     - This is the main database where information for all shrink is stored.
-- shrinkDb
+
+#### shrinkDb
+ ![Department generator](static/assets/shrinkdepartment.png)
     - This Database is mainly used to store the Departments to make sure a accurate department is selected making it easier to manipulate the database to what I need.
         The Database name does need to be changed at a later date but due to time restrictions i was unable to obtain this
-- userDB
+
+#### userDB
+    ![User Database](static/assets/userdb.png)
     - This Database will be used to store user credentials. With this I will be able to generate the correct information needed for the specific Team Manager
 
 ## UX
@@ -78,9 +85,9 @@ The predicted users of the site will be Managers, Area Directors, Colleagues and
 
 ### Thoughts Behind The Design
 
-- ![Inform Screen Grab](static/assets/inform.jpg){:height="50%" width="50%"}
 The app is designed using Materialize to help comply to good UX design. The colors are chosen to match those of similar apps
-avaliable to Tesco colleagues to try give a familiar feel to it, namly Inform
+avaliable to Tesco colleagues to try give a familiar feel to it, namley Inform.
+- ![Inform Screen Grab](static/assets/inform.jpg)
 
 ### Colors and theme of the website.
 
@@ -194,14 +201,18 @@ Technologies used in the making of this page are:
     - Used to check the responsive design of the website.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
     - Used to loop through information from the database and display it accurately.
-
+- [Heroku](https://en.wikipedia.org/wiki/Heroku)
+    - Used to deploy the App
+- [BeFunky](https://www.befunky.com/)
+    - Used to resize images
 ### Personal Testing
 
 ## Functionality
 
 All interactions with the database are working as intended. Some issues with layout have however been discovered.
+
 - ![Log out user](static/assets/logout-test-mobile.png)
-    - Log Out Works as intended
+    Log out is working
 - ![Log in User](static/assets/login-test.png)
     - Log in works as intended
 - ![Register User](static/assets/register-test-mobile.png)
@@ -284,7 +295,7 @@ Used to look for any potential problems.
     
 ### Deployment
 
-The website is hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
+The App is hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
 
 The process:
 - Host a git repository on Github.
@@ -294,6 +305,10 @@ The process:
 - Save changes. 
 - The page is now ready to be viewed.
 - The generic page set up will be 'yourusername'.github.io/'thereponame'
+
+It is Deployed using [Heroku](https://my-shrink.herokuapp.com/)
+The process:
+-
 
 ## Credits
 
