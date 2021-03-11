@@ -196,7 +196,7 @@ Technologies used in the making of this page are:
 - [GitHub](https://github.com/)
     - Used for Repository.
 - [Gitpages](https://pages.github.com/)
-    - Used to Host the website. 
+    - Used to Host the Website. 
 - [Am I Responsive?](http://ami.responsivedesign.is/)
     - Used to check the responsive design of the website.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
@@ -250,7 +250,7 @@ During Testing some problems have been discovered.
 - On mobile screens, the information can overload the cards and force
   the information to stack incorrectly. This issue is currently being looked into. Also, products must be searched for by
   full name as partial search is not working. 
-  
+
   ![Search problem](static/assets/search-test-mobile.png)
 - Flash Images get stuck under Nav bar due to javascript function. Currently looking into a fix. 
 - Google Map not showing.
