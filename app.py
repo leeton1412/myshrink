@@ -23,6 +23,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_shrink")
 def get_shrink():
+    """
+    Shrink Home page
+    """
     # find and sort shrink top 5
     shrink = list(mongo.db.shrinkDB.find().limit(20).sort(
         "amount_lost_value", -1,))
@@ -35,6 +38,9 @@ def get_shrink():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Register User to Database
+    """
     if request.method == "POST":
         # See if manager is registered
         present_user = mongo.db.userDb.find_one(
@@ -61,6 +67,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Login function
+    """
     if request.method == "POST":
         present_user = mongo.db.userDb.find_one(
             {"username": request.form.get("username").lower()})
@@ -85,6 +94,9 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    User Profile page
+    """
     # Unpack MongoDb for profile find the user
     user = mongo.db.userDb.find_one({"username": username})
     # find the user department
@@ -103,7 +115,9 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # Log user out on request
+    """
+    Log user out on request
+    """
     flash("Logout Successful")
     session.pop("user")
     return redirect(url_for("login"))
@@ -111,7 +125,9 @@ def logout():
 
 @app.route("/addshrink", methods=["GET", "POST"])
 def addshrink():
-    # Submit form
+    """
+    Add Shrink to Database
+    """
     if request.method == "POST":
         resolved = True if request.form.get("resolved") else False
         shrink = {
@@ -137,7 +153,9 @@ def addshrink():
 
 @app.route("/edit_shrink/<shrink_id>", methods=["GET", "POST"])
 def edit_shrink(shrink_id):
-    # Submit form, Get the information to edit
+    """
+    Edit Shrink Function
+    """
     if request.method == "POST":
         resolved = True if request.form.get("resolved") else False
         edit = {
@@ -164,7 +182,9 @@ def edit_shrink(shrink_id):
 
 @app.route("/delete_shrink/<shrink_id>")
 def delete_shrink(shrink_id):
-    # Delete Shrink when clicked
+    """
+    Delete Shrink Function
+    """
     mongo.db.shrinkDB.remove({"_id": ObjectId(shrink_id)})
     flash("Shrink Deleted")
     return redirect(url_for("get_shrink"))
@@ -172,6 +192,9 @@ def delete_shrink(shrink_id):
 
 @app.route("/search_shrink", methods=["GET", "POST"])
 def search_shrink():
+    """
+    Search Shrink function
+    """
     # Get the shrink to search
     shrink = mongo.db.shrinkDB.find()
     # Post the search method using the index
@@ -186,8 +209,18 @@ def search_shrink():
 
 @app.route("/contact")
 def contact():
+    """
     # Render contact page
+    """
     return render_template("contact.html")
+
+
+@app.route("/cancel")
+def cancel():
+    """
+    Cancel button
+    """
+    return redirect("get_shrink")
 
 
 # Dont forget to remove debug
