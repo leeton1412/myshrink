@@ -2,7 +2,7 @@
 
 ![Responsive screen grab of homepage](static/assets/responsive-screen-shot.png)
 
-A website built to help managers in Tesco bridge their skill gap with Shrink. 
+A website built to help managers in Tesco bridge their skill gap with Shrink. Simplicity is the key
 The website will be powered by a Mongodb that contains the inputed shrink from the managers.
 
 ## Ease of use
