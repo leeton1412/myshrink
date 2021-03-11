@@ -50,21 +50,21 @@ Python3 will be used to call the functions.
 
 ### Database structure
 
-- ![Databases](static/assets/collections.png)
+![Databases](static/assets/collections.png)
 For this project I decided that i would use 3 Collections.
 
 #### shrinkDB
  ![shrink Database](static/assets/shrinkDB.png)
-    - This is the main database where information for all shrink is stored.
+This is the main database where information for all shrink is stored.
 
 #### shrinkDb
  ![Department generator](static/assets/shrinkdepartment.png)
-    - This Database is mainly used to store the Departments to make sure a accurate department is selected making it easier to manipulate the database to what I need.
-        The Database name does need to be changed at a later date but due to time restrictions i was unable to obtain this
+This Database is mainly used to store the Departments to make sure a accurate department is selected making it easier to manipulate the database to what I need.
+The Database name does need to be changed at a later date but due to time restrictions i was unable to obtain this
 
 #### userDB
-    ![User Database](static/assets/userdb.png)
-    - This Database will be used to store user credentials. With this I will be able to generate the correct information needed for the specific Team Manager
+![User Database](static/assets/userdb.png)
+This Database will be used to store user credentials. With this I will be able to generate the correct information needed for the specific Team Manager
 
 ## UX
 
