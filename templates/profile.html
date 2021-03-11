@@ -22,8 +22,10 @@
                                     <i class="fas fa-pound-sign"></i>£{{ result.amount_lost_value }}</p>
                                 </div>
                                 <div class="collapsible-body">
-                                   <p class="media-text">  {{ result.additional_info }}<br>
-                                     {{ result.date }} </p>
+                                   <p class="media-text">Information: {{ result.additional_info }}</p><br>
+                                    <p class="media-text">Date: {{ result.date }}</p><br>
+                                    <p class="media-text">Employee: {{ result.employee.upper()}}</p>
+
                                 </div>
                                 </li>
                                 </ul>
@@ -46,13 +48,14 @@
                         <li>
                     <div class="collapsible-header blue darken-1">
                         <a href="{{ url_for('edit_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                        <a href="{{ url_for('delete_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small button-style red lighten-1">Delete</a>
-                        <p class="media-text"><i class="fas fa-apple-alt"></i>{{result.product_name}}<br>
-                        <i class="fas fa-pound-sign"></i>{{result.amount_lost_value}}</p>
+                        <a href="{{ url_for('delete_shrink', shrink_id=result._id) }}" class="waves-effect waves-light btn-small red lighten-1">Delete</a>
+                        <p class="media-text"><i class="fas fa-apple-alt"></i>{{result.product_name}}</p><br>
+                        <p class="media-text"> <i class="fas fa-pound-sign"></i>{{result.amount_lost_value}}</p>
                     </div>
                     <div class="collapsible-body">
-                        <p class="media-text"> {{result.additional_info}}</p> <br>
-                        <p class="media-text"> {{result.date}} </p>
+                        <p class="media-text">Information: {{result.additional_info}}</p> <br>
+                        <p class="media-text">Date: {{result.date}} </p>
+                        <p class="media-text"> Employee: {{ result.employee.upper()}}</p>
                     </div>
                         </li>
                             </ul>

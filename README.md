@@ -193,7 +193,36 @@ Technologies used in the making of this page are:
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
     - Used to loop through information from the database and display it accurately.
 
-## Personal Testing
+### Personal Testing
+
+## Functionality
+
+All interactions with the database are working as intended. Some issues with layout have however been discovered.
+- ![Log out user](static/assets/logout-test-mobile.png)
+    - Log Out Works as intended
+- ![Log in User](static/assets/login-test.png)
+    - Log in works as intended
+- ![Register User](static/assets/register-test-mobile.png)
+    - Register works as intended
+- ![Search Items](static/assets/search-test-mobile.png)
+    - Search will not accept partial inputs. Results dont display clean on smaller devices
+- ![Add Shrink](static/assets/add-test.png)
+    - Add Shrink does not accept spaces in product name. This has been fixed
+- ![Contact Test](static/assets/contact-test.png)
+    - Contact Works as intended.
+- ![Edit Test](static/assets/edit-test2.png)
+    - Works as intended.
+- ![Delete Test](static/assets/delete-shrink.png)
+    - Works as intended.
+    
+## Problems encountered
+
+During Testing some problems have been discovered.
+- On mobile screens, the information can overload the cards and force
+  the information to stack incorrectly. This issue is currently being looked into. Also, products must be searched for by
+  full name as partial search is not working. 
+  ![Search problem](static/assets/search-test-mobile)
+
 ## User Testing
 
 The site was tested by users and software. It has been tested on Google Chrome v83.0.4103.97 and Mozilla Firefox v77.0.1 (64) on Acer Ryzen 5 and also 
@@ -215,14 +244,14 @@ Jack was asked to test the page and to feed back on any problems that he encount
         - Syntax wording did not match with flow of page.
         - The text has now been corrected. 
 
-### Ben Palmby
+### Sam Jones
 
 Ben was asked to test the page and to feed back on any problems that he encountered or for any feed back he might have. 
 - Problems Encountered.
     - Index.html text would not fit on screens 750 and above.
         - Media Query has been added to change this.
 
-### [Laura Sawyn](https://www.linkedin.com/in/laura-sawyn-628757178/)
+### [Ian Westwood]
 
 Laura was asked to give feedback on the layout of the page.
 - Feed Back.
