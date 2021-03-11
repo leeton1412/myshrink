@@ -308,6 +308,7 @@ Ian was asked to give feedback on the layout of the App.
 Used to look for any potential problems.
 - Problems.
     - line 130 parse error, 177 parse error in CSS. Unsure as to what is causing the error and is being looked into.
+        - Now passes test through validator but still issue in style.CSS
     - Double occurance of id. This is due to a jinja loop. 
     
 ### Deployment
