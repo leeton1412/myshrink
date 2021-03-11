@@ -224,6 +224,9 @@ During Testing some problems have been discovered.
   the information to stack incorrectly. This issue is currently being looked into. Also, products must be searched for by
   full name as partial search is not working. 
   ![Search problem](static/assets/search-test-mobile.png)
+- Flash Images get stuck under Nav bar due to javascript function. Currently looking into a fix. 
+- Google Map not showing.
+    - This is due to billing account not being linked which I am currently not comfortable doing. 
 
 ## User Testing
 
