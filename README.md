@@ -34,8 +34,8 @@ A Manager can also visit the search function which will enable them to search fo
 
 It can be used on all devices.
 
-Hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
-Repository on [GitHub.com](https://github.com/leeton1412/bronament)
+Hosted on [Heroku](https://my-shrink.herokuapp.com/)
+Repository on [GitHub.com](https://github.com/leeton1412/myshrink)
 
 ## License
 >This project is created for Tesco and is avaliable upon request [MyShrink](https://github.com/leeton1412/myshrink). 
@@ -120,7 +120,7 @@ Here you can see screen shots of the Wire Frames. Due to time restrictions, ther
 - Float Button to help navigate the page to the most important sections easier.
 - Alerts for users login and log out. Also for shrink being added and deleted.
 - Login functionallity putting a user in session. 
-- ERegistration functionallity registering the user to the database.
+- Registration functionallity registering the user to the database.
 - Search Function to allow managers to search and delete all shrink. As this information is sensitive.
 - Profile page displaying that users specific Shrink items.
 - Live contact form using [Emailjs](https://www.emailjs.com).
@@ -154,6 +154,8 @@ Due to limitations with current personal circumstances and Covid-19, the time I 
 
 Technologies used in the making of this page are:
 
+- [Font-Awesome](https://fontawesome.com/)
+    - Used for icons across the project
 - [HTML](https://www.w3schools.com/whatis/whatis_html.asp)
     - Used to structure the site. 
 - [CSS](https://www.w3schools.com/whatis/whatis_css.asp)
@@ -163,7 +165,7 @@ Technologies used in the making of this page are:
 - [Jquery](https://jquery.com/download/)
     - Used to initialize a varity of functions from Materialize 
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-    - Used to help create the app and communicate with Jinja
+    - Is used for back end application and interaction with front end
 - [Pymongo](https://pymongo.readthedocs.io/en/stable/)
     - Used to interact between python and MongoDB
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
