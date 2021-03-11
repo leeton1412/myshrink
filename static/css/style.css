@@ -127,12 +127,7 @@ li a:active{
 }
 li a:link{
     text-decoration: none;
-    col
 }
-li a:hover{
-    color: white;
-}
-/* Nav-bar styling */ 
 
 .sticky-nav{
     position: fixed;
@@ -175,13 +170,14 @@ li a:hover{
     font-size: 10px;
     }
 }​
+/* ------------Shrink page*/ 
 
-/* Shrink add */ 
 .shrink-add{
     margin-top: 30px;
 }
 
 /* register */
+
 .register{
     margin-top: 30px;
 }

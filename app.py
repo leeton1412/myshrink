@@ -26,6 +26,7 @@ def get_shrink():
     # find and sort shrink top 5
     shrink = list(mongo.db.shrinkDB.find().limit(20).sort(
         "amount_lost_value", -1,))
+    # Find shrink that has been resolved
     shrinkrs = list(mongo.db.shrinkDB.find().limit(20).sort(
         "amount_lost_value", -1,))
     return render_template(
@@ -102,6 +103,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    # Log user out on request
     flash("Logout Successful")
     session.pop("user")
     return redirect(url_for("login"))
@@ -135,7 +137,7 @@ def addshrink():
 
 @app.route("/edit_shrink/<shrink_id>", methods=["GET", "POST"])
 def edit_shrink(shrink_id):
-    # Submit form
+    # Submit form, Get the information to edit
     if request.method == "POST":
         resolved = True if request.form.get("resolved") else False
         edit = {
@@ -162,6 +164,7 @@ def edit_shrink(shrink_id):
 
 @app.route("/delete_shrink/<shrink_id>")
 def delete_shrink(shrink_id):
+    # Delete Shrink when clicked
     mongo.db.shrinkDB.remove({"_id": ObjectId(shrink_id)})
     flash("Shrink Deleted")
     return redirect(url_for("get_shrink"))
@@ -169,7 +172,9 @@ def delete_shrink(shrink_id):
 
 @app.route("/search_shrink", methods=["GET", "POST"])
 def search_shrink():
+    # Get the shrink to search
     shrink = mongo.db.shrinkDB.find()
+    # Post the search method using the index
     if request.method == "POST":
         search = request.form.get("search")
         shrinksearch = list(mongo.db.shrinkDB.find(
@@ -181,6 +186,7 @@ def search_shrink():
 
 @app.route("/contact")
 def contact():
+    # Render contact page
     return render_template("contact.html")
 
 
@@ -188,4 +194,4 @@ def contact():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

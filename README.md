@@ -50,7 +50,7 @@ Python3 will be used to call the functions.
 
 ### Database structure
 
-For this project I decided that i would use 3 Databases.
+For this project I decided that i would use 3 Collections.
 - shrinkDB
     - This is the main database where information for all shrink is stored.
 - shrinkDb
@@ -214,14 +214,14 @@ All interactions with the database are working as intended. Some issues with lay
     - Works as intended.
 - ![Delete Test](static/assets/delete-shrink.png)
     - Works as intended.
-    
+
 ## Problems encountered
 
 During Testing some problems have been discovered.
 - On mobile screens, the information can overload the cards and force
   the information to stack incorrectly. This issue is currently being looked into. Also, products must be searched for by
   full name as partial search is not working. 
-  ![Search problem](static/assets/search-test-mobile)
+  ![Search problem](static/assets/search-test-mobile.png)
 
 ## User Testing
 
@@ -230,37 +230,37 @@ a desktop PC. It has also been tested on Ipad Pro, Samsung Galaxy s9, Iphone 11 
 
 ### Jack Bailey
 
-Jack was asked to test the page and to feed back on any problems that he encountered or for any feed back he might have. Test was carried out on iphone 10 & a Acer Laptop
+Jack was asked to test the app and to feed back on any problems that he encountered or for any feed back he might have. Test was carried out on iphone 10 & a Acer Laptop
 - Problems Encountered 
-    - Gallery page displayed a scroll bar on screens sized 414 x 736.
-        - Issue was due to a container problem but has been changed.
-    - On mobile banner is very large when rotated.
-        - This issue has been changed.
+    - Shrink doesnt display in a inline manner.
+        - Issue was due to materialize buttons. A fix is being worked on.
+    - Titles not clear.
+        - Headings of the website where not clear. A opacity has been added.
     - Back-ground of menu items on toggle makes it hard to read
         - This is a valid point and is being changed
 
 - Feed Back. 
-    - Syntax Error with text on Index.html
+    - Syntax Error with text on Home Page
         - Syntax wording did not match with flow of page.
         - The text has now been corrected. 
 
 ### Sam Jones
 
-Ben was asked to test the page and to feed back on any problems that he encountered or for any feed back he might have. 
+Sam was asked to test the page and to feed back on any problems that he encountered or for any feed back he might have. 
 - Problems Encountered.
-    - Index.html text would not fit on screens 750 and above.
-        - Media Query has been added to change this.
+    - No issue in the use of the app.
+- Feed Back
+    - Potential for a shrink next step page to log meetings.
+        - This is very vaild and is being looked into. 
 
-### [Ian Westwood]
+### Ian Westwood
 
-Laura was asked to give feedback on the layout of the page.
+Ian was asked to give feedback on the layout of the App.
 - Feed Back.
-    - Index.html text would not fit on screens 750 and above.
+    - Home text would not fit on screens 650 and below.
         - Media Query has been added to change this.
-    - Facebook Link view takes to a personal page not a Group page.
-        - Group page is being created to answer this problem.
-    - Linkedin Link is not working.
-        - This is an issue with LinkedIn and is being investigated.
+    - Potential for a KPI section.
+        - This would be very useful for the company and will be looked into.
     - Create an Alert for contact page to know it has been sent.
         - This has now been implemented.
     - Spelling across the pages is incorrect.
@@ -274,18 +274,9 @@ Laura was asked to give feedback on the layout of the page.
 
 Used to look for any potential problems.
 - Problems.
-    - Various syntax errors. All fixed.
-    - Semi-colons missing on tournament.js
-    - Anchor tags having a button as a descendant. Issue is fixed.
+    - line 130 parse error, 177 parse error in CSS. Unsure as to what is causing the error and is being looked into.
+    - Double occurance of id. This is due to a jinja loop. 
     
-
-## [Am I Responsive?](http://ami.responsivedesign.is/)
-
-This website was used to check the layout on various screen sizes. 
-- Problems
-    - inde.html text doesnt fit to page on screen size 768 x 1024.
-        - This problem has been fixed.
-
 ### Deployment
 
 The website is hosted on [GitHub Pages](https://leeton1412.github.io/bronament/)
@@ -304,25 +295,16 @@ The process:
 ### Content 
 
 - All images from this website are obtained from [Unsplash](https://unsplash.com/)
+ 
+- Nav bar basic structure obtained from [Materialize](https://materializecss.com/getting-started.html).
 
-- Game information is obtained via [WikipediaAPI](https://www.mediawiki.org/wiki/API:Main_page). 
-
-- Nav bar basic structure obtained from [CodePen](https://codepen.io/ericagulto/full/KgdyqJ/).
-
-- Footer basic structure obatined from [MDbootstrap](https://mdbootstrap.com/docs/jquery/navigation/footer/).
-
-- Hover and Landing.html affects obtained from [Animista](https://animista.net/) and [Hover.css](https://ianlunn.github.io/Hover/).
-
-- Cors error corrected by using [Cors-anywhere](https://github.com/Rob--W/cors-anywhere/#documentation).
-
-- Sounds are obtained using [101SoundBoards](https://www.101soundboards.com/boards/10441-street-fighter-ii-sounds)
+- Footer basic structure obatined from [Materialize](https://materializecss.com/getting-started.html).
 
 ### Acknowledgments 
 
 - Thanks to Seun Owonikoko @seun_mentor.
 - Stuart Crang for encouraging me to join the course.
-- Callum Jackson for sharing his PHP knowledge with me to help me understand how to build the brackets in Javascript.
-- Laura Sawyn for always supporting me through development. 
+- Code Institute Support team for their fantastic support through a difficult time in my life
 - My current Linkedin Group for continued help and motivation. 
 - Code institute tutor support for always being available and willingness to support.  
 - Code institute for providing me with the tools to chase my dreams. 
