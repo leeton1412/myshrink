@@ -78,7 +78,7 @@ The predicted users of the site will be Managers, Area Directors, Colleagues and
 
 ### Thoughts Behind The Design
 
-- ![Inform Screen Grab](static/assets/inform.jpg)
+- ![Inform Screen Grab](static/assets/inform.jpg){:height="50%" width="50%"}
 The app is designed using Materialize to help comply to good UX design. The colors are chosen to match those of similar apps
 avaliable to Tesco colleagues to try give a familiar feel to it, namly Inform
 
