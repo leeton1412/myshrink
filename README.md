@@ -211,22 +211,37 @@ Technologies used in the making of this page are:
 
 All interactions with the database are working as intended. Some issues with layout have however been discovered.
 
-- ![Log out user](static/assets/logout-test-mobile.png)
-    Log out is working
-- ![Log in User](static/assets/login-test.png)
-    - Log in works as intended
-- ![Register User](static/assets/register-test-mobile.png)
-    - Register works as intended
-- ![Search Items](static/assets/search-test-mobile.png)
-    - Search will not accept partial inputs. Results dont display clean on smaller devices
-- ![Add Shrink](static/assets/add-test.png)
-    - Add Shrink does not accept spaces in product name. This has been fixed
-- ![Contact Test](static/assets/contact-test.png)
-    - Contact Works as intended.
-- ![Edit Test](static/assets/edit-test2.png)
-    - Works as intended.
-- ![Delete Test](static/assets/delete-shrink.png)
-    - Works as intended.
+![Log out user](static/assets/logout-test-mobile.png)
+    
+This Screen shows a user successfully logging out
+
+![Log in User](static/assets/login-test.png)
+
+This shows a user loggin in
+
+![Register User](static/assets/register-test-mobile.png)
+ 
+This shows a user registering successfully
+
+![Search Items](static/assets/search-test-mobile.png)
+
+This screen shows a user using the search function. Search will not accept partial inputs. Results dont display clean on smaller devices
+
+![Add Shrink](static/assets/add-test.png)
+This shows a user Adding Shrink. It did not accept spaces in product name. This has been fixed
+
+![Contact Test](static/assets/contact-test.png)
+
+This shows a user using the contact form. Contact Works as intended.
+
+
+![Edit Test](static/assets/edit-test2.png)
+
+This shows a user using the edit function . Works as intended.
+
+![Delete Test](static/assets/delete-shrink.png)
+
+This shows a user using the delete function only provided on profile or search. Works as intended.
 
 ## Problems encountered
 
